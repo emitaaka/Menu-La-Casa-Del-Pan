@@ -12,7 +12,7 @@
     font-size: 2.2rem;
     letter-spacing: 3px;
     margin-bottom: 0;
-    color: var(--verde-papalotl); /* El título principal en verde */
+    color: var(--verde-papalotl); 
 }
 
 .hero h2 {
@@ -28,7 +28,7 @@
 }
 
 .ig-link {
-    color: var(--verde-papalotl); /* Link en verde para que se vea */
+    color: var(--verde-papalotl); 
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
@@ -40,9 +40,8 @@
 }
 
 .alerta-alergia {
-    background-color: rgba(95, 130, 113, 0.1); /* Fondecito verde súper transparente */
     border: 1px solid var(--verde-papalotl);
-    color: var(--texto-principal);
+    color: #487667;
     padding: 10px;
     border-radius: 8px;
     font-size: 0.75rem;
@@ -57,10 +56,8 @@
     margin-bottom: 1rem;
 }
 
-/* --- GRID DE TARJETAS --- */
 .grid-tarjetas {
     display: grid;
-    /* Esto hace que sean 2 columnas en celular */
     grid-template-columns: repeat(2, 1fr); 
     gap: 1rem;
     padding: 0 1rem;
@@ -124,4 +121,177 @@
 
 .tarjeta-delhorno {
     background-color: #698b64;
+}
+
+/* --- ESTILOS DE LA TARJETA PREMIUM --- */
+.tarjeta-premium {
+    position: relative;
+    display: block;
+    background-color: #E6E5DA; /* El beige de la foto */
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden; /* Para que las hojas no se salgan de la tarjeta */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-premium:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+/* --- TEXTOS --- */
+.contenido-tarjeta {
+    position: relative;
+    z-index: 2;
+}
+
+.titulo-cafe {
+    color: #4A3320; /* Café oscuro de la letra */
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 0.2rem;
+}
+
+.mariposa-mini {
+    width: 40px;
+    margin: 0.5rem 0;
+}
+
+.subtitulo-cursiva {
+    font-family: 'Brush Script MT', cursive; /* Da ese look de firma */
+    color: #4A3320;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.separador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #5F8271; 
+}
+
+.separador hr {
+    width: 80%;
+    border: none;
+    border-top: 1.5px solid #5F8271;
+    margin: 5px 0;
+}
+
+.horario {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.hoja {
+    position: absolute;
+    width: 250px; 
+    opacity: 0.8;
+    z-index: 1;
+    transition: transform 0.5s ease;
+}
+
+.hoja-izq {
+    top: -40px; 
+    left: -40px;
+    transform-origin: top left;
+}
+
+.hoja-der {
+    top: -40px;
+    right: -40px;
+    transform-origin: top right;
+}
+
+@keyframes brisa-izq {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(8deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes brisa-der {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(-8deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.tarjeta-premium:hover .hoja-izq {
+    animation: brisa-izq 2s ease-in-out infinite;
+}
+
+.tarjeta-premium:hover .hoja-der {
+    animation: brisa-der 2s ease-in-out infinite;
+}
+
+/* --- MAGIA DEL SCROLL --- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- BOTÓN PARA BAJAR --- */
+.btn-bajar {
+    background-color: #5F8271; /* Verde Papalotl */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 1rem 0 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-bajar:hover {
+    background-color: #4A3320; /* Cambia a café al pasar el mouse */
+    transform: translateY(-3px);
+}
+
+/* --- CONTENEDOR DE CONTACTO --- */
+.info-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 2rem;
+}
+
+/* --- ENLACES CON ESTILO BONITO --- */
+.enlace-bonito {
+    color: #4A3320; /* Café oscuro para que resalte */
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    /* Le ponemos un borde abajo en vez del subrayado default feo */
+    border-bottom: 1px dashed #4A3320; 
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.enlace-bonito:hover {
+    color: #5F8271; /* Se pinta verde al pasar el mouse */
+    border-bottom-color: #5F8271;
+}
+
+/* --- QR (Garantizando que se centre abajo) --- */
+.qr-ig {
+    display: block; /* Esto evita que flote a los lados */
+    margin: 0 auto 2rem auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    background-color: #acc4b9; 
+    padding: 8px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.qr-ig:hover {
+    transform: scale(1.05);
 }

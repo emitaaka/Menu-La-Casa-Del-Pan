@@ -10,27 +10,50 @@
     <!-- SECCIÓN DE PRESENTACIÓN (HERO) -->
     <header class="hero">
         <div class="logo-placeholder">
-            <!-- Aquí mandas llamar tu imagen -->
             <img src="./Imagenes/mariposa.png" alt="Logo Papalotl" class="logo-mariposa">
         </div>
-        <h1>PAPALOTL</h1>
+        
+        <img src="./Imagenes/papalotl.png" alt="PAPALOTL" class="img-titulo">
         <h2>LA CASA DEL PAN</h2>
-        <p class="direccion">Av. México 25, Del Carmen, Coyoacán, CDMX</p>
-        <a href="https://instagram.com/casadelpancoyoacan" class="ig-link" target="_blank">@casadelpancoyoacan</a>
+
+        <a href="#seccion-menu" class="btn-bajar">Ver Menú ↓</a>
+        
+        <div class="info-contacto">
+            <a href="https://maps.app.goo.gl/Ax1qnSKZCV2zNZ7c7" class="enlace-bonito" target="_blank">
+                Av. México 25, Del Carmen, Coyoacán, CDMX
+            </a>
+            
+            <a href="https://instagram.com/casadelpancoyoacan" class="enlace-bonito" target="_blank">
+                @casadelpancoyoacan
+            </a>
+        </div>
+        
+        <img src="./Imagenes/igqr.png" alt="QR Instagram" class="qr-ig">
         
         <div class="alerta-alergia">
-            ⚠️ EN CASO DE PADECER ALGUNA ALERGIA, FAVOR DE INFORMAR A NUESTRO PERSONAL.
+            <span>EN CASO DE PADECER ALGUNA ALERGIA, FAVOR DE INFORMAR A NUESTRO PERSONAL.</span>
         </div>
     </header>
 
     <!-- SECCIÓN DE NAVEGACIÓN (TARJETITAS) -->
-    <main>
+    <main id="seccion-menu">
         <div class="grid-tarjetas">
             
-            <a href="comidas.html" class="tarjeta tarjeta-comidas">
-                <span class="icono">🍲</span>
-                <h3>Comidas</h3>
-                <p>Las buenas tardes</p>
+            <a href="comidas.html" class="tarjeta-premium">
+                <img src="./Imagenes/hoja1_izq.png" alt="" class="hoja hoja-izq">
+                <img src="./Imagenes/hoja1_der.png" alt="" class="hoja hoja-der">
+
+                <div class="contenido-tarjeta">
+                    <h3 class="titulo-cafe">COMIDAS</h3>
+                    <img src="./Imagenes/mariposa.png" alt="Mariposa" class="mariposa-mini">
+                    <p class="subtitulo-cursiva">las buenas tardes</p>
+                    
+                    <div class="separador">
+                        <hr>
+                        <p class="horario">SERVICIO A PARTIR DE LAS 13:30HRS</p>
+                        <hr>
+                    </div>
+                </div>
             </a>
 
             <a href="desayunos.html" class="tarjeta tarjeta-desayunos">
