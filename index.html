@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Papalotl - La Casa del Pan</title>
+    <title>La Casa del Pan</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./Imagenes/mariposa.png">
 </head>
 <body>
-    <!-- SECCIÓN DE PRESENTACIÓN (HERO) -->
     <header class="hero">
+        <div class="contenedor-idioma">
+            <button id="btn-idioma" class="btn-lang">
+                <span id="texto-lang">ENGLISH</span>
+            </button>
+        </div>
+
         <div class="logo-placeholder">
             <img src="./Imagenes/mariposa.png" alt="Logo Papalotl" class="logo-mariposa">
         </div>
@@ -18,28 +24,22 @@
 
         <a href="#seccion-menu" class="btn-bajar">Ver Menú ↓</a>
         
-        <div class="info-contacto">
-            <a href="https://maps.app.goo.gl/Ax1qnSKZCV2zNZ7c7" class="enlace-bonito" target="_blank">
-                Av. México 25, Del Carmen, Coyoacán, CDMX
-            </a>
-            
-            <a href="https://instagram.com/casadelpancoyoacan" class="enlace-bonito" target="_blank">
-                @casadelpancoyoacan
-            </a>
-        </div>
-        
-        <img src="./Imagenes/igqr.png" alt="QR Instagram" class="qr-ig">
-        
         <div class="alerta-alergia">
             <span>EN CASO DE PADECER ALGUNA ALERGIA, FAVOR DE INFORMAR A NUESTRO PERSONAL.</span>
         </div>
     </header>
 
-    <!-- SECCIÓN DE NAVEGACIÓN (TARJETITAS) -->
+    <nav class="nav-pegajosa">
+        <a href="#comidas" class="nav-link activo">Comidas</a>
+        <a href="#desayunos" class="nav-link">Desayunos</a>
+        <a href="#bebidas" class="nav-link">Bebidas</a>
+        <a href="#delhorno" class="nav-link">Del Horno</a>
+    </nav>
+
     <main id="seccion-menu">
         <div class="grid-tarjetas">
             
-            <a href="comidas.html" class="tarjeta-premium">
+            <a href="#comidas" class="tarjeta-premium tarjeta-comidas">
                 <img src="./Imagenes/hoja1_izq.png" alt="" class="hoja hoja-izq">
                 <img src="./Imagenes/hoja1_der.png" alt="" class="hoja hoja-der">
 
@@ -56,25 +56,75 @@
                 </div>
             </a>
 
-            <a href="desayunos.html" class="tarjeta tarjeta-desayunos">
-                <span class="icono">🍳</span>
-                <h3>Desayunos</h3>
-                <p>Los buenos días</p>
+            <a href="#desayunos" class="tarjeta-premium tarjeta-desayunos">
+                <img src="./Imagenes/hoja2_izq.png" alt="" class="hoja hoja-izq">
+                <img src="./Imagenes/hoja2_der.png" alt="" class="hoja hoja-der">
+
+                <div class="contenido-tarjeta">
+                    <h3 class="titulo-cafe">DESAYUNOS</h3>
+                    <img src="./Imagenes/mariposa2.png" alt="Mariposa" class="mariposa-mini">
+                    <p class="subtitulo-cursiva">los buenos días</p>
+                    
+                    <div class="separador">
+                        <hr>
+                        <p class="horario">HASTA LAS 13:30HRS</p>
+                        <hr>
+                    </div>
+                </div>
             </a>
 
-            <a href="bebidas.html" class="tarjeta tarjeta-bebidas">
-                <span class="icono">☕</span>
-                <h3>Bebidas</h3>
-                <p>Para refrescarte</p>
+            <a href="#bebidas" class="tarjeta-premium tarjeta-bebidas">
+                <img src="./Imagenes/hoja3_der.png" alt="" class="hoja hoja-izq">
+                <img src="./Imagenes/hoja3_izq.png" alt="" class="hoja hoja-der">
+
+                <div class="contenido-tarjeta">
+                    <h3 class="titulo-cafe">BEBIDAS</h3>
+                    <img src="./Imagenes/mariposa3.png" alt="Mariposa" class="mariposa-mini">
+                    <p class="subtitulo-cursiva">para refrescarte</p>
+                    
+                    <div class="separador">
+                        <hr>
+                        <p class="horario">SERVICIO DURANTE TODO EL DÍA</p>
+                        <hr>
+                    </div>
+                </div>
             </a>
 
-            <a href="delhorno.html" class="tarjeta tarjeta-delhorno">
-                <span class="icono">🥐</span>
-                <h3>Del Horno</h3>
-                <p>Delicias horneadas</p>
+            <a href="#delhorno" class="tarjeta-premium tarjeta-delhorno">
+                <img src="./Imagenes/hoja4_izq.png" alt="" class="hoja hoja-izq">
+                <img src="./Imagenes/hoja4_der.png" alt="" class="hoja hoja-der">
+
+                <div class="contenido-tarjeta">
+                    <h3 class="titulo-cafe">DEL HORNO</h3>
+                    <img src="./Imagenes/mariposa4.png" alt="Mariposa" class="mariposa-mini">
+                    <p class="subtitulo-cursiva">delicias horneadas</p>
+                    
+                    <div class="separador">
+                        <hr>
+                        <p class="horario">SERVICIO DURANTE TODO EL DÍA</p>
+                        <hr>
+                    </div>
+                </div>
             </a>
 
         </div>
     </main>
+
+    <footer>
+        <div class="mapa-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.387309287214!2d-99.1652166!3d19.352375300000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ffc2550cf4a5%3A0x47b23352008900f1!2sAv.%20M%C3%A9xico%2025%2C%20Del%20Carmen%2C%20Coyoac%C3%A1n%2C%2004100%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1782702936445!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        
+        <div class="info-contacto">
+            <a href="https://maps.app.goo.gl/Ax1qnSKZCV2zNZ7c7" class="enlace-bonito" target="_blank">
+                📍 Av. México 25, Del Carmen, Coyoacán, CDMX
+            </a>
+            <a href="https://instagram.com/casadelpancoyoacan" class="enlace-bonito" target="_blank">
+                📱 @casadelpancoyoacan
+            </a>
+        </div>
+        
+        <img src="./Imagenes/igqr.png" alt="QR Instagram" class="qr-ig">
+    </footer>
 </body>
 </html>
