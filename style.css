@@ -1,442 +1,121 @@
 /* =========================================
    1. CONFIGURACIÓN BASE Y VARIABLES
    ========================================= */
-html {
-    scroll-behavior: smooth; /* Magia para que baje suavecito */
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-}
+html { scroll-behavior: smooth; }
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Helvetica Neue', Arial, sans-serif; }
+body { background-color: #F0F5F2; color: #2C3E35; min-height: 100vh; margin: 0; }
 
 /* =========================================
-   2. HERO SECTION (Portada)
+   2. HERO SECTION (Portada) & SWITCH IDIOMA
    ========================================= */
-.hero {
-    position: relative;
-    background-color: #acc4b9; 
-    color: #2C3E35;
-    text-align: center;
-    padding: 3rem 1rem 2rem;
-    margin-bottom: 2rem;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
+.hero { position: relative; background-color: #acc4b9; color: #2C3E35; text-align: center; padding: 3rem 1rem 2rem; margin-bottom: 2rem; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
 
-.contenedor-idioma {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 10;
-}
+.contenedor-idioma { position: absolute; top: 20px; right: 20px; z-index: 10; }
+.toggle-checkbox { display: none; }
+.toggle-label { background-color: #FDFBF7; border: 2px solid #487767; border-radius: 30px; width: 70px; height: 34px; display: flex; align-items: center; justify-content: space-between; padding: 0 8px; position: relative; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.lang-es, .lang-en { font-size: 0.75rem; font-weight: 900; color: #487767; z-index: 1; transition: color 0.3s ease; }
+.toggle-bolita { position: absolute; top: 2px; left: 2px; width: 26px; height: 26px; background-color: #487767; border-radius: 50%; transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1); z-index: 0; }
+.toggle-checkbox:checked + .toggle-label .toggle-bolita { transform: translateX(36px); }
+.toggle-checkbox:checked + .toggle-label .lang-en { color: #FDFBF7; }
+.toggle-checkbox:not(:checked) + .toggle-label .lang-es { color: #FDFBF7; }
 
-.btn-lang {
-    background-color: transparent;
-    color: #487767; 
-    border: 2px solid #487767;
-    padding: 6px 14px;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: 900;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 6px; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+.logo-mariposa { max-width: 120px; height: auto; margin-bottom: 0.5rem; }
+.hero h2 { font-size: 1.2rem; font-weight: 400; margin-bottom: 1.5rem; color: #4A3320; }
 
-.btn-lang:hover {
-    background-color: #487767;
-    color: #FDFBF7; 
-    transform: scale(1.05); 
-}
+.btn-bajar { background-color: #5F8271; color: white; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: bold; letter-spacing: 1px; margin: 1rem 0 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.15); transition: all 0.3s ease; display: inline-block; }
+.btn-bajar:hover { background-color: #4A3320; transform: translateY(-3px); }
 
-.logo-mariposa {
-    max-width: 120px;
-    height: auto;
-    margin-bottom: 0.5rem;
-}
-
-.hero h2 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
-    color: #4A3320;
-}
-
-.btn-bajar {
-    background-color: #5F8271;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin: 1rem 0 2rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.btn-bajar:hover {
-    background-color: #4A3320; 
-    transform: translateY(-3px);
-}
-
-.alerta-alergia {
-    background-color: #FDFBF7;
-    border-left: 5px solid #d9534f;
-    color: #2C3E35;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    line-height: 1.4;
-    max-width: 90%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
+.alerta-alergia { background-color: #FDFBF7; border-left: 5px solid #d9534f; color: #2C3E35; padding: 12px 18px; border-radius: 8px; font-size: 0.75rem; font-weight: bold; line-height: 1.4; max-width: 90%; margin: 0 auto; display: flex; align-items: center; gap: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
 
 /* =========================================
-   3. MENÚ NAVEGACIÓN (Sticky Bar) - ¡NUEVO!
+   3. MENÚ NAVEGACIÓN (Sticky Bar)
    ========================================= */
-.nav-pegajosa {
-    position: sticky;
-    top: 0;
-    background-color: #FDFBF7;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 15px 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    margin-bottom: 2rem;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #5F8271;
-    font-size: 0.9rem;
-    font-weight: bold;
-    padding: 8px 16px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    background-color: #E8EFEA;
-}
-
-.nav-link:hover, .nav-link.activo {
-    background-color: #487667;
-    color: white;
-}
+.nav-pegajosa { position: sticky; top: 0; background-color: #FDFBF7; z-index: 100; display: flex; justify-content: center; gap: 10px; padding: 15px 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); margin-bottom: 2rem; }
+.nav-link { text-decoration: none; color: #5F8271; font-size: 0.9rem; font-weight: bold; padding: 8px 16px; border-radius: 20px; transition: all 0.3s ease; background-color: #E8EFEA; }
+.nav-link:hover, .nav-link.activo { background-color: #487667; color: white; }
 
 /* =========================================
    4. TARJETAS PREMIUM Y SUS COLORES
    ========================================= */
-.grid-tarjetas {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 1rem;
-    padding: 0 1rem;
-    margin-bottom: 3rem;
-}
+.grid-tarjetas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; padding: 0 1rem; margin-bottom: 3rem; }
 
-/* Asignación de variables por cada categoría */
 .tarjeta-comidas   { --bg-tarjeta: #e3e0d9; --color-deco: #477566; --color-texto: #4A3320; }
 .tarjeta-desayunos { --bg-tarjeta: #487667; --color-deco: #B3C09B; --color-texto: #FDFBF7; }
 .tarjeta-bebidas   { --bg-tarjeta: #b2c29d; --color-deco: #6D7C50; --color-texto: #4A3320; }
 .tarjeta-delhorno  { --bg-tarjeta: #698b64; --color-deco: #BABD4F; --color-texto: #FDFBF7; }
 
-.tarjeta-premium {
-    position: relative;
-    display: block;
-    background-color: var(--bg-tarjeta); /* Jala el color dinámicamente */
-    border-radius: 12px;
-    padding: 2rem 1rem;
-    text-align: center;
-    text-decoration: none;
-    overflow: hidden; 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+.tarjeta-premium { position: relative; display: block; background-color: var(--bg-tarjeta); border-radius: 12px; padding: 2rem 1rem; text-align: center; text-decoration: none; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.tarjeta-premium:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.15); }
+.contenido-tarjeta { position: relative; z-index: 2; }
 
-.tarjeta-premium:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-}
+.titulo-cafe { color: var(--color-texto); font-size: 2.2rem; font-weight: 900; letter-spacing: 2px; margin-bottom: 0.2rem; }
+.mariposa-mini { width: 40px; margin: 0.5rem 0; }
+.tarjeta-desayunos .mariposa-mini { transform: scale(1.4); }
+.subtitulo-cursiva { font-family: 'Brush Script MT', cursive; color: var(--color-texto); font-size: 1.5rem; margin-bottom: 1rem; }
 
-.contenido-tarjeta {
-    position: relative;
-    z-index: 2;
-}
+.separador { display: flex; flex-direction: column; align-items: center; color: var(--color-deco); }
+.separador hr { width: 80%; border: none; border-top: 1.5px solid var(--color-deco); margin: 5px 0; }
+.horario { font-size: 0.75rem; letter-spacing: 2px; font-weight: bold; }
 
-/* Los textos jalan las variables para tener buen contraste */
-.titulo-cafe {
-    color: var(--color-texto); 
-    font-size: 2.2rem;
-    font-weight: 900;
-    letter-spacing: 2px;
-    margin-bottom: 0.2rem;
-}
-
-.mariposa-mini {
-    width: 40px;
-    margin: 0.5rem 0;
-}
-
-.subtitulo-cursiva {
-    font-family: 'Brush Script MT', cursive; 
-    color: var(--color-texto);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.separador {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--color-deco); 
-}
-
-.separador hr {
-    width: 80%;
-    border: none;
-    border-top: 1.5px solid var(--color-deco);
-    margin: 5px 0;
-}
-
-.horario {
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
-/* Animación de las hojitas */
-.hoja {
-    position: absolute;
-    width: 250px; 
-    opacity: 0.8;
-    z-index: 1;
-    transition: transform 0.5s ease;
-}
-
+.hoja { position: absolute; width: 250px; opacity: 0.8; z-index: 1; transition: transform 0.5s ease; }
 .hoja-izq { top: -40px; left: -40px; transform-origin: top left; }
 .hoja-der { top: -40px; right: -40px; transform-origin: top right; }
 
-@keyframes brisa-izq {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(8deg); }
-    100% { transform: rotate(0deg); }
-}
-
-@keyframes brisa-der {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(-8deg); }
-    100% { transform: rotate(0deg); }
-}
-
+@keyframes brisa-izq { 0% { transform: rotate(0deg); } 50% { transform: rotate(8deg); } 100% { transform: rotate(0deg); } }
+@keyframes brisa-der { 0% { transform: rotate(0deg); } 50% { transform: rotate(-8deg); } 100% { transform: rotate(0deg); } }
 .tarjeta-premium:hover .hoja-izq { animation: brisa-izq 2s ease-in-out infinite; }
 .tarjeta-premium:hover .hoja-der { animation: brisa-der 2s ease-in-out infinite; }
 
-
 /* =========================================
-   5. FOOTER Y MAPA - ¡NUEVO!
+   5. FOOTER Y MAPA
    ========================================= */
-footer {
-    background-color: #acc4b9;
-    padding: 3rem 1rem;
-    text-align: center;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    margin-top: 3rem;
-}
-
-.mapa-container iframe {
-    width: 100%;
-    max-width: 600px; /* Para que no se estire feo en PC */
-    height: 300px;
-    border-radius: 12px;
-    border: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin-bottom: 2rem;
-}
-
-.info-contacto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 2rem;
-}
-
-.enlace-bonito {
-    color: #4A3320; 
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    border-bottom: 1px dashed #4A3320; 
-    padding-bottom: 2px;
-    transition: all 0.3s ease;
-}
-
-.enlace-bonito:hover {
-    color: #FDFBF7; 
-    border-bottom-color: #FDFBF7;
-}
-
-.qr-ig {
-    display: block; 
-    margin: 0 auto 1rem auto;
-    width: 120px;
-    height: 120px;
-    border-radius: 12px;
-    background-color: #FDFBF7; 
-    padding: 8px; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
-}
-
-.qr-ig:hover {
-    transform: scale(1.05);
-}
-
-.tarjeta-desayunos .mariposa-mini {
-    transform: scale(1.4); /* Cámbiale el número si la quieres más grande o chica */
-}
-
-.toggle-checkbox {
-    display: none; 
-}
-
-.toggle-label {
-    background-color: #FDFBF7;
-    border: 2px solid #487767;
-    border-radius: 30px;
-    width: 70px;
-    height: 34px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 8px;
-    position: relative;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.lang-es, .lang-en {
-    font-size: 0.75rem;
-    font-weight: 900;
-    color: #487767;
-    z-index: 1;
-    transition: color 0.3s ease;
-}
-
-.toggle-bolita {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 26px;
-    height: 26px;
-    background-color: #487767;
-    border-radius: 50%;
-    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-    z-index: 0;
-}
-
-.toggle-checkbox:checked + .toggle-label .toggle-bolita {
-    transform: translateX(36px);
-}
-
-.toggle-checkbox:checked + .toggle-label .lang-en { color: #FDFBF7; }
-.toggle-checkbox:not(:checked) + .toggle-label .lang-es { color: #FDFBF7; }
+footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; border-top-left-radius: 30px; border-top-right-radius: 30px; margin-top: 3rem; }
+.mapa-container iframe { width: 100%; max-width: 600px; height: 300px; border-radius: 12px; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 2rem; }
+.info-contacto { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-bottom: 2rem; }
+.enlace-bonito { color: #4A3320; text-decoration: none; font-size: 0.95rem; font-weight: 500; border-bottom: 1px dashed #4A3320; padding-bottom: 2px; transition: all 0.3s ease; }
+.enlace-bonito:hover { color: #FDFBF7; border-bottom-color: #FDFBF7; }
+.qr-ig { display: block; margin: 0 auto 1rem auto; width: 120px; height: 120px; border-radius: 12px; background-color: #acc4b9; padding: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: transform 0.3s ease; }
+.qr-ig:hover { transform: scale(1.05); }
 
 /* =========================================
    6. DISEÑO DE LOS PLATILLOS INDIVIDUALES
    ========================================= */
-#contenedor-menus {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1rem 4rem 1rem;
+#contenedor-menus { max-width: 800px; margin: 0 auto; padding: 0 1rem 4rem 1rem; }
+.seccion-platillos { padding: 80px 1rem 4rem 1rem; margin-bottom: 2rem; border-radius: 20px; }
+.cabecera-seccion { text-align: center; margin-bottom: 2rem; border-bottom: 2px solid var(--color-titulos); padding-bottom: 1rem; }
+
+/* Centralizamos tu color cafecito para toda la tipografía de esta sección */
+.cabecera-seccion h2, 
+.cabecera-seccion .subtitulo-cursiva, 
+.horario-detalle, 
+.categoria-menu h3, 
+.item-header h4, 
+.precios,
+.extras li,
+.precio-extra {
+    color: #645047;
 }
 
-.seccion-platillos {
-    padding-top: 80px; /* Margen para que la barra pegajosa no tape el título al bajar */
-    margin-bottom: 4rem;
-}
+.cabecera-seccion h2 { font-size: 2.5rem; letter-spacing: 2px; }
+.horario-detalle { font-size: 0.85rem; font-weight: bold; letter-spacing: 1px; }
+.categoria-menu h3 { margin-bottom: 1.5rem; font-size: 1.5rem; }
 
-.cabecera-seccion {
-    text-align: center;
-    margin-bottom: 2rem;
-    border-bottom: 2px solid #5F8271;
-    padding-bottom: 1rem;
-}
+.item-menu { background-color: rgba(255, 255, 255, 0.6); padding: 1.2rem 1.5rem; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border-left: 5px solid var(--color-titulos); transition: transform 0.2s ease; }
+.item-menu:hover { transform: scale(1.02); }
 
-.cabecera-seccion h2 {
-    color: #4A3320;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-}
+.item-header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px dashed #ccc; padding-bottom: 0.5rem; margin-bottom: 0.5rem; }
+.item-header h4 { font-size: 1.2rem; }
+.precios { font-weight: bold; font-size: 1.1rem; }
+.desc-item { font-size: 0.9rem; color: #666; }
 
-.cabecera-seccion p {
-    color: #5F8271;
-    font-size: 0.85rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
+.extras { list-style: none; margin-top: 0.5rem; padding: 0; }
+.extras li { display: flex; justify-content: space-between; font-style: italic; font-size: 0.85rem; margin-bottom: 0.3rem; padding-left: 1rem; }
+.precio-extra { font-weight: bold; }
 
-.categoria-menu h3 {
-    color: #487667;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-}
-
-.item-menu {
-    background-color: white;
-    padding: 1.2rem 1.5rem;
-    border-radius: 12px;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    border-left: 5px solid #5F8271;
-    transition: transform 0.2s ease;
-}
-
-.item-menu:hover {
-    transform: scale(1.02);
-}
-
-.item-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    border-bottom: 1px dashed #ccc;
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.item-header h4 {
-    color: #4A3320;
-    font-size: 1.2rem;
-}
-
-.precios {
-    color: #487667;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-.desc-item {
-    font-size: 0.9rem;
-    color: #666;
-}
+/* =========================================
+   7. COLORES Y ESTILOS POR SECCIÓN DE MENÚ
+   ========================================= */
+.tema-comidas { background-color: #e3e0d9; --color-titulos: #477566; --color-texto: #4A3320; }
+.tema-desayunos { background-color: #487667; --color-titulos: #B3C09B; --color-texto: #FDFBF7; }
+.tema-bebidas { background-color: #b2c29d; --color-titulos: #6D7C50; --color-texto: #4A3320; }
+.tema-delhorno { background-color: #698b64; --color-titulos: #BABD4F; --color-texto: #FDFBF7; }
