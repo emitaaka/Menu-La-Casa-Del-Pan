@@ -10,9 +10,12 @@
 <body>
     <header class="hero">
         <div class="contenedor-idioma">
-            <button id="btn-idioma" class="btn-lang">
-                <span id="texto-lang">ENGLISH</span>
-            </button>
+            <input type="checkbox" id="toggle-lang" class="toggle-checkbox">
+            <label for="toggle-lang" class="toggle-label">
+                <span class="lang-es">ES</span>
+                <span class="lang-en">EN</span>
+                <div class="toggle-bolita"></div>
+            </label>
         </div>
 
         <div class="logo-placeholder">
@@ -109,6 +112,46 @@
 
         </div>
     </main>
+
+    <div id="contenedor-menus">
+        
+        <section id="comidas" class="seccion-platillos">
+            <div class="cabecera-seccion">
+                <h2>Comidas</h2>
+                <p>las buenas tardes - SERVICIO A PARTIR DE LAS 13:30HRS</p>
+            </div>
+
+            <div class="categoria-menu">
+                <h3>Para comenzar: Ensaladas</h3>
+                
+                <div class="item-menu">
+                    <div class="item-header">
+                        <h4>La Fronda</h4>
+                        <span class="precios">CH $96 | GDE $120</span>
+                    </div>
+                    <p class="desc-item">Lechuga, berros, manzana, nuez y aderezo de mostaza agridulce.</p>
+                </div>
+
+                <div class="item-menu">
+                    <div class="item-header">
+                        <h4>Papalotl</h4>
+                        <span class="precios">CH $96 | GDE $120</span>
+                    </div>
+                    <p class="desc-item">Lechuga, germinado, zanahoria, jitomate, aguacate y aderezo de hierbas.</p>
+                </div>
+                
+                <div class="item-menu">
+                    <div class="item-header">
+                        <h4>Mediterránea</h4>
+                        <span class="precios">CH $110 | GDE $135</span>
+                    </div>
+                    <p class="desc-item">Lechuga, jitomate, pepino, queso de cabra, aceitunas negras y vinagreta de la casa.</p>
+                </div>
+            </div>
+            
+            </section>
+
+    </div>
 
     <footer>
         <div class="mapa-container">

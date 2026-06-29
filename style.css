@@ -311,3 +311,132 @@ footer {
 .qr-ig:hover {
     transform: scale(1.05);
 }
+
+.tarjeta-desayunos .mariposa-mini {
+    transform: scale(1.4); /* Cámbiale el número si la quieres más grande o chica */
+}
+
+.toggle-checkbox {
+    display: none; 
+}
+
+.toggle-label {
+    background-color: #FDFBF7;
+    border: 2px solid #487767;
+    border-radius: 30px;
+    width: 70px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.lang-es, .lang-en {
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: #487767;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.toggle-bolita {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background-color: #487767;
+    border-radius: 50%;
+    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    z-index: 0;
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-bolita {
+    transform: translateX(36px);
+}
+
+.toggle-checkbox:checked + .toggle-label .lang-en { color: #FDFBF7; }
+.toggle-checkbox:not(:checked) + .toggle-label .lang-es { color: #FDFBF7; }
+
+/* =========================================
+   6. DISEÑO DE LOS PLATILLOS INDIVIDUALES
+   ========================================= */
+#contenedor-menus {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem 4rem 1rem;
+}
+
+.seccion-platillos {
+    padding-top: 80px; /* Margen para que la barra pegajosa no tape el título al bajar */
+    margin-bottom: 4rem;
+}
+
+.cabecera-seccion {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #5F8271;
+    padding-bottom: 1rem;
+}
+
+.cabecera-seccion h2 {
+    color: #4A3320;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.cabecera-seccion p {
+    color: #5F8271;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.categoria-menu h3 {
+    color: #487667;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.item-menu {
+    background-color: white;
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-left: 5px solid #5F8271;
+    transition: transform 0.2s ease;
+}
+
+.item-menu:hover {
+    transform: scale(1.02);
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.item-header h4 {
+    color: #4A3320;
+    font-size: 1.2rem;
+}
+
+.precios {
+    color: #487667;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.desc-item {
+    font-size: 0.9rem;
+    color: #666;
+}
