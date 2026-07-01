@@ -314,3 +314,12 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
 .encabezado-precios span:first-child {
     grid-column: 2;
 }
+
+.nota-leches {
+    text-align: right;
+    font-size: 0.7rem;
+    font-style: italic;
+    color: var(--color-desc);
+    margin-top: 1rem;
+    padding: 0 1.5rem;
+}
