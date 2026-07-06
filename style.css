@@ -19,7 +19,7 @@ body { background-color: #F0F5F2; color: #2C3E35; min-height: 100vh; margin: 0; 
 .toggle-checkbox:checked + .toggle-label .lang-en { color: #FDFBF7; }
 .toggle-checkbox:not(:checked) + .toggle-label .lang-es { color: #FDFBF7; }
 
-.logo-mariposa { max-width: 120px; height: auto; margin-bottom: 0.5rem; }
+.logo-mariposa { max-width: clamp(75px, 14vw, 120px); height: auto; margin-bottom: 0.5rem; }
 .hero h2 { font-size: 1.2rem; font-weight: 400; margin-bottom: 1.5rem; color: #4A3320; }
 
 .btn-bajar { background-color: #5F8271; color: white; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: bold; letter-spacing: 1px; margin: 1rem 0 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.15); transition: all 0.3s ease; display: inline-block; }
@@ -49,7 +49,7 @@ body { background-color: #F0F5F2; color: #2C3E35; min-height: 100vh; margin: 0; 
 .contenido-tarjeta { position: relative; z-index: 2; }
 
 .titulo-cafe { color: var(--color-texto); font-size: 2.2rem; font-weight: 900; letter-spacing: 2px; margin-bottom: 0.2rem; }
-.mariposa-mini { width: 40px; margin: 0.5rem 0; }
+.mariposa-mini { width: clamp(28px, 6vw, 40px); margin: 0.5rem 0; }
 .subtitulo-cursiva { font-family: 'Brush Script MT', cursive; color: var(--color-texto); font-size: 1.5rem; margin-bottom: 1rem; }
 
 .separador { display: flex; flex-direction: column; align-items: center; color: var(--color-deco); }
@@ -58,7 +58,7 @@ body { background-color: #F0F5F2; color: #2C3E35; min-height: 100vh; margin: 0; 
 .horario { font-size: 0.75rem; letter-spacing: 2px; font-weight: bold; }
 
 /* Hojitas animadas de las tarjetas principales */
-.hoja { position: absolute; width: 250px; opacity: 0.8; z-index: 1; transition: transform 0.5s ease; }
+.hoja { position: absolute; width: clamp(100px, 27vw, 250px); opacity: 0.8; z-index: 1; transition: transform 0.5s ease; }
 .hoja-izq { top: -40px; left: -40px; transform-origin: top left; }
 .hoja-der { top: -40px; right: -40px; transform-origin: top right; }
 
@@ -75,7 +75,7 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
 .info-contacto { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-bottom: 2rem; }
 .enlace-bonito { color: #4A3320; text-decoration: none; font-size: 0.95rem; font-weight: 500; border-bottom: 1px dashed #4A3320; padding-bottom: 2px; transition: all 0.3s ease; }
 .enlace-bonito:hover { color: #FDFBF7; border-bottom-color: #FDFBF7; }
-.qr-ig { display: block; margin: 0 auto 1rem auto; width: 120px; height: 120px; border-radius: 12px; background-color: #acc4b9; padding: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: transform 0.3s ease; }
+.qr-ig { display: block; margin: 0 auto 1rem auto; width: clamp(90px, 20vw, 120px); height: clamp(90px, 20vw, 120px); border-radius: 12px; background-color: #acc4b9; padding: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: transform 0.3s ease; }
 .qr-ig:hover { transform: scale(1.05); }
 
 /* =========================================
@@ -94,7 +94,7 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
 .cabecera-seccion {
     text-align: center;
     margin-bottom: 2rem;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem 2rem 1rem;
 }
 
 /* Textos de la cabecera */
@@ -139,7 +139,7 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
 /* Las hojitas decorativas de la cabecera */
 .hoja-seccion {
     position: absolute;
-    width: 360px; /* Subimos el tamaño (antes 320px) */
+    width: clamp(150px, 40vw, 360px);
     opacity: 0.6; 
     z-index: 1;
     pointer-events: none; 
@@ -258,14 +258,20 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
 }
 
 .deco-rama {
-    width: 35%; 
-    max-width: 450px; 
+    width: clamp(75px, 22vw, 260px); 
     height: auto;
     object-fit: contain;
 }
 
+/* Ramas más pequeñas en Bebidas y Del Horno, pero con mínimo legible
+   porque estos trazos (footer3/footer4) son más delgados que footer2 */
+.tema-bebidas .deco-rama,
+.tema-delhorno .deco-rama {
+    width: clamp(65px, 14vw, 160px);
+}
+
 .texto-deco {
-    color: var(--color-texto); /* Cambiamos a color café para uniformidad */
+    color: var(--color-titulos); /* Usa el color decorativo de cada sección para combinar con las hojitas */
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-weight: 900;
     letter-spacing: 3px;
@@ -322,4 +328,22 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
     color: var(--color-desc);
     margin-top: 1rem;
     padding: 0 1.5rem;
+}
+
+/* =========================================
+   9. RESPONSIVE - AJUSTES DE POSICIÓN Y TIPOGRAFÍA
+   (Los tamaños de imagen ya se escalan solos con clamp() 
+   en sus reglas base, arriba en este archivo)
+   ========================================= */
+
+/* Celulares: acercamos un poco las hojas a la esquina y achicamos textos */
+@media (max-width: 480px) {
+    .hoja-izq { top: -20px; left: -20px; }
+    .hoja-der { top: -20px; right: -20px; }
+    .hoja-izq-seccion { top: -25px; left: -20px; }
+    .hoja-der-seccion { top: -25px; right: -20px; }
+
+    .texto-deco { font-size: 1.2rem; letter-spacing: 1.5px; }
+    .titulo-cafe { font-size: 1.7rem; }
+    .cabecera-seccion h2 { font-size: 1.9rem; }
 }
