@@ -1,4 +1,12 @@
 /* =========================================
+   0. SISTEMA DE IDIOMAS (ES / EN)
+   ========================================= */
+.t-en { display: none; }
+.t-es, .t-en { font: inherit; letter-spacing: inherit; text-transform: inherit; }
+body.idioma-en .t-es { display: none; }
+body.idioma-en .t-en { display: inline; }
+
+/* =========================================
    1. CONFIGURACIÓN BASE Y VARIABLES
    ========================================= */
 html { scroll-behavior: smooth; }
