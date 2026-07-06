@@ -20,6 +20,7 @@ body { background-color: #F0F5F2; color: #2C3E35; min-height: 100vh; margin: 0; 
 .toggle-checkbox:not(:checked) + .toggle-label .lang-es { color: #FDFBF7; }
 
 .logo-mariposa { max-width: clamp(75px, 14vw, 120px); height: auto; margin-bottom: 0.5rem; }
+.img-titulo { width: clamp(240px, 65vw, 500px); max-width: 100%; height: auto; margin-bottom: 0.5rem; }
 .hero h2 { font-size: 1.2rem; font-weight: 400; margin-bottom: 1.5rem; color: #4A3320; }
 
 .btn-bajar { background-color: #5F8271; color: white; padding: 12px 24px; border-radius: 30px; text-decoration: none; font-weight: bold; letter-spacing: 1px; margin: 1rem 0 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.15); transition: all 0.3s ease; display: inline-block; }
