@@ -39,7 +39,7 @@ body { background-color: #F0F5F2; color: #2C3E35; min-height: 100vh; margin: 0; 
 /* =========================================
    3. MENÚ NAVEGACIÓN (Sticky Bar)
    ========================================= */
-.nav-pegajosa { position: sticky; top: 0; background-color: #FDFBF7; z-index: 100; display: flex; justify-content: center; align-items: center; gap: 10px; padding: 15px 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); margin-bottom: 2rem; }
+.nav-pegajosa { position: sticky; top: 0; background-color: #FDFBF7; z-index: 100; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; padding: 15px 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); margin-bottom: 2rem; }
 .nav-link { text-decoration: none; color: #5F8271; font-size: 0.9rem; font-weight: bold; padding: 8px 16px; border-radius: 20px; transition: all 0.3s ease; background-color: #E8EFEA; }
 
 /* Cada botón toma el mismo color que su tarjeta de inicio */
@@ -80,7 +80,7 @@ body { background-color: #F0F5F2; color: #2C3E35; min-height: 100vh; margin: 0; 
 .tarjeta-premium:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.15); }
 .contenido-tarjeta { position: relative; z-index: 2; }
 
-.titulo-cafe { color: var(--color-texto); font-size: 2.2rem; font-weight: 900; letter-spacing: 2px; margin-bottom: 0.2rem; }
+.titulo-cafe { color: var(--color-texto); font-size: clamp(1.15rem, 6.5vw, 2.2rem); font-weight: 900; letter-spacing: clamp(0.5px, 0.6vw, 2px); margin-bottom: 0.2rem; }
 .mariposa-mini { width: clamp(28px, 6vw, 40px); margin: 0.5rem 0; }
 .subtitulo-cursiva { font-family: 'Brush Script MT', cursive; color: var(--color-texto); font-size: 1.5rem; margin-bottom: 1rem; }
 
@@ -134,7 +134,7 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
 .qr-card {
     display: inline-block;
     margin: 0 auto 1.5rem auto;
-    background-color: #acc4b9;
+    background-color: #FDFBF7;
     border-radius: 16px;
     padding: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -410,14 +410,10 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
 .subnav-tabs {
     display: flex;
     justify-content: center;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    flex-wrap: wrap;
     gap: 10px;
     padding: 0 1rem 2rem 1rem;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
 }
-.subnav-tabs::-webkit-scrollbar { display: none; }
 
 .tab-link {
     flex: 0 0 auto;
@@ -455,6 +451,5 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
     .hoja-der-seccion { top: -25px; right: -20px; }
 
     .texto-deco { font-size: 1.2rem; letter-spacing: 1.5px; }
-    .titulo-cafe { font-size: 1.7rem; }
     .cabecera-seccion h2 { font-size: 1.9rem; }
 }
