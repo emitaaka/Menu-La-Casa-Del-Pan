@@ -34,7 +34,8 @@
     </header>
 
     <nav class="nav-pegajosa">
-        <a href="#comidas" class="nav-link activo"><span class="t-es">Comidas</span><span class="t-en">Food</span></a>
+        <img src="./Imagenes/mariposa.png" alt="Papalotl" class="mariposa-nav">
+        <a href="#comidas" class="nav-link"><span class="t-es">Comidas</span><span class="t-en">Food</span></a>
         <a href="#desayunos" class="nav-link"><span class="t-es">Desayunos</span><span class="t-en">Breakfast</span></a>
         <a href="#bebidas" class="nav-link"><span class="t-es">Bebidas</span><span class="t-en">Drinks</span></a>
         <a href="#delhorno" class="nav-link"><span class="t-es">Del Horno</span><span class="t-en">From the Oven</span></a>
@@ -133,7 +134,14 @@
                 </div>
             </div>
 
-            <div class="categoria-menu">
+                        <div class="subnav-tabs">
+                <button type="button" class="tab-link activo" data-tab="para-comenzar"><span class="t-es">Para comenzar</span><span class="t-en">To Start</span></button>
+                <button type="button" class="tab-link" data-tab="ensaladas"><span class="t-es">Ensaladas</span><span class="t-en">Salads</span></button>
+                <button type="button" class="tab-link" data-tab="platillos"><span class="t-es">Platillos</span><span class="t-en">Dishes</span></button>
+                <button type="button" class="tab-link" data-tab="sandwiches"><span class="t-es">Sandwiches</span><span class="t-en">Sandwiches</span></button>
+            </div>
+
+            <div class="categoria-menu categoria-tab" data-tab="para-comenzar">
                 <h3><span class="t-es">Para comenzar</span><span class="t-en">To Start</span></h3>
                 
                 <div class="item-menu">
@@ -174,7 +182,7 @@
                 </div>
             </div>
 
-            <div class="categoria-menu">
+            <div class="categoria-menu categoria-tab" data-tab="ensaladas">
                 <h3><span class="t-es">Ensaladas</span><span class="t-en">Salads</span></h3>
                 
                 <div class="item-menu">
@@ -210,7 +218,7 @@
                 </div>
             </div>
 
-            <div class="categoria-menu">
+            <div class="categoria-menu categoria-tab" data-tab="platillos">
                 <h3><span class="t-es">Platillos</span><span class="t-en">Dishes</span></h3>
                 
                 <div class="item-menu">
@@ -302,7 +310,7 @@
                 </div>
             </div>
 
-            <div class="categoria-menu">
+            <div class="categoria-menu categoria-tab" data-tab="sandwiches">
                 <h3><span class="t-es">Sandwiches</span><span class="t-en">Sandwiches</span></h3>
                 
                 <div class="item-menu">
@@ -387,239 +395,244 @@
             </div>
 
             <!-- Categoría: Platos Fuertes -->
-            <div class="categoria-menu">
+                        <div class="subnav-tabs">
+                <button type="button" class="tab-link activo" data-tab="platos-fuertes"><span class="t-es">Platos fuertes</span><span class="t-en">Main Dishes</span></button>
+                <button type="button" class="tab-link" data-tab="huevos"><span class="t-es">Huevos</span><span class="t-en">Eggs</span></button>
+            </div>
+
+            <div class="categoria-menu categoria-tab" data-tab="platos-fuertes">
                 <h3><span class="t-es">Platos fuertes</span><span class="t-en">Main Dishes</span></h3>
                 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Chilaquiles verdes o rojos</h4>
+                        <h4><span class="t-es">Chilaquiles verdes o rojos</span><span class="t-en">Green or Red Chilaquiles</span></h4>
                         <span class="precios">$135</span>
                     </div>
-                    <p class="desc-item">Con crema y queso, acompañados de frijoles.</p>
+                    <p class="desc-item"><span class="t-es">Con crema y queso, acompañados de frijoles.</span><span class="t-en">With cream and cheese, served with beans.</span></p>
                     <ul class="extras">
-                        <li>Con huevo <span class="precio-extra">+$15</span></li>
-                        <li>Con aguacate <span class="precio-extra">+$30</span></li>
+                        <li><span class="t-es">Con huevo</span><span class="t-en">With egg</span> <span class="precio-extra">+$15</span></li>
+                        <li><span class="t-es">Con aguacate</span><span class="t-en">With avocado</span> <span class="precio-extra">+$30</span></li>
                     </ul>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Enchiladas verdes o rojas</h4>
+                        <h4><span class="t-es">Enchiladas verdes o rojas</span><span class="t-en">Green or Red Enchiladas</span></h4>
                         <span class="precios">$160</span>
                     </div>
-                    <p class="desc-item">Rellenas de huevo o queso, con crema, queso y frijoles.</p>
+                    <p class="desc-item"><span class="t-es">Rellenas de huevo o queso, con crema, queso y frijoles.</span><span class="t-en">Filled with egg or cheese, with cream, cheese and beans.</span></p>
                     <ul class="extras">
-                        <li>Con aguacate <span class="precio-extra">+$30</span></li>
+                        <li><span class="t-es">Con aguacate</span><span class="t-en">With avocado</span> <span class="precio-extra">+$30</span></li>
                     </ul>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Enfrijoladas</h4>
+                        <h4><span class="t-es">Enfrijoladas</span><span class="t-en">Enfrijoladas</span></h4>
                         <span class="precios">$160</span>
                     </div>
-                    <p class="desc-item">Rellenas de huevo, queso manchego o panela. Con nopales, crema y salsa pasilla.</p>
+                    <p class="desc-item"><span class="t-es">Rellenas de huevo, queso manchego o panela. Con nopales, crema y salsa pasilla.</span><span class="t-en">Filled with egg, manchego or panela cheese. With nopales, cream and pasilla sauce.</span></p>
                     <ul class="extras">
-                        <li>Con aguacate <span class="precio-extra">+$30</span></li>
+                        <li><span class="t-es">Con aguacate</span><span class="t-en">With avocado</span> <span class="precio-extra">+$30</span></li>
                     </ul>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Enmoladas</h4>
+                        <h4><span class="t-es">Enmoladas</span><span class="t-en">Enmoladas</span></h4>
                         <span class="precios">$165</span>
                     </div>
-                    <p class="desc-item">Rellenas de huevo o queso.</p>
+                    <p class="desc-item"><span class="t-es">Rellenas de huevo o queso.</span><span class="t-en">Filled with egg or cheese.</span></p>
                     <ul class="extras">
-                        <li>Con aguacate<span class="precio-extra">+$30</span></li>
+                        <li><span class="t-es">Con aguacate</span><span class="t-en">With avocado</span><span class="precio-extra">+$30</span></li>
                     </ul>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Enmoladas veganas</h4>
+                        <h4><span class="t-es">Enmoladas veganas</span><span class="t-en">Vegan Enmoladas</span></h4>
                         <span class="precios">$165</span>
                     </div>
-                    <p class="desc-item">Rellenas de vegetales, bañadas con mole de la casa.</p>
+                    <p class="desc-item"><span class="t-es">Rellenas de vegetales, bañadas con mole de la casa.</span><span class="t-en">Filled with vegetables, covered in house mole sauce.</span></p>
                     <ul class="extras">
-                        <li>Con aguacate<span class="precio-extra">+$30</span></li>
+                        <li><span class="t-es">Con aguacate</span><span class="t-en">With avocado</span><span class="precio-extra">+$30</span></li>
                     </ul>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Molletes</h4>
+                        <h4><span class="t-es">Molletes</span><span class="t-en">Molletes</span></h4>
                         <span class="precios">$120</span>
                     </div>
-                    <p class="desc-item">Bollo de la casa con frijoles y queso manchego. Servido con pico de gallo.</p>
+                    <p class="desc-item"><span class="t-es">Bollo de la casa con frijoles y queso manchego. Servido con pico de gallo.</span><span class="t-en">House bread roll with beans and manchego cheese. Served with pico de gallo.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Molletitos</h4>
+                        <h4><span class="t-es">Molletitos</span><span class="t-en">Mini Molletes</span></h4>
                         <span class="precios">$120</span>
                     </div>
-                    <p class="desc-item">Tres bollitos. El tamaño ideal para niños.</p>
+                    <p class="desc-item"><span class="t-es">Tres bollitos. El tamaño ideal para niños.</span><span class="t-en">Three mini rolls. The perfect size for kids.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Tostas de aguacate</h4>
+                        <h4><span class="t-es">Tostas de aguacate</span><span class="t-en">Avocado Tostadas</span></h4>
                         <span class="precios">$170</span>
                     </div>
-                    <p class="desc-item">Acompañado de lechuga y jitomates.</p>
+                    <p class="desc-item"><span class="t-es">Acompañado de lechuga y jitomates.</span><span class="t-en">Served with lettuce and tomatoes.</span></p>
                     <ul class="extras">
-                        <li>Con huevo <span class="precio-extra">+$15</span></li>
+                        <li><span class="t-es">Con huevo</span><span class="t-en">With egg</span> <span class="precio-extra">+$15</span></li>
                     </ul>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Ventana</h4>
+                        <h4><span class="t-es">Ventana</span><span class="t-en">Ventana</span></h4>
                         <span class="precios">$140</span>
                     </div>
-                    <p class="desc-item">Bollo de la casa con jitomate, queso, albahaca y un toque de mayonesa.</p>
+                    <p class="desc-item"><span class="t-es">Bollo de la casa con jitomate, queso, albahaca y un toque de mayonesa.</span><span class="t-en">House bread roll with tomato, cheese, basil and a touch of mayonnaise.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Ventana vegana</h4>
+                        <h4><span class="t-es">Ventana vegana</span><span class="t-en">Vegan Ventana</span></h4>
                         <span class="precios">$140</span>
                     </div>
-                    <p class="desc-item">Pan de la casa con jitomate, albahaca, tofu y un toque de aceite de olivo.</p>
+                    <p class="desc-item"><span class="t-es">Pan de la casa con jitomate, albahaca, tofu y un toque de aceite de olivo.</span><span class="t-en">House bread with tomato, basil, tofu and a touch of olive oil.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Quesadillas</h4>
+                        <h4><span class="t-es">Quesadillas</span><span class="t-en">Quesadillas</span></h4>
                         <span class="precios">$125</span>
                     </div>
-                    <p class="desc-item">Rellenas de champiñones, nopales y/o rajas con queso panela o manchego a elegir.</p>
+                    <p class="desc-item"><span class="t-es">Rellenas de champiñones, nopales y/o rajas con queso panela o manchego a elegir.</span><span class="t-en">Filled with mushrooms, nopales and/or chili strips, with your choice of panela or manchego cheese.</span></p>
                     <ul class="extras">
-                        <li>Con tofu <span class="precio-extra">+$20</span></li>
+                        <li><span class="t-es">Con tofu</span><span class="t-en">With tofu</span> <span class="precio-extra">+$20</span></li>
                     </ul>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Bisquet preparado o pan tostado</h4>
+                        <h4><span class="t-es">Bisquet preparado o pan tostado</span><span class="t-en">Prepared Biscuit or Toast</span></h4>
                         <span class="precios">$60</span>
                     </div>
-                    <p class="desc-item">Con mantequilla y orden de mermelada.</p>
+                    <p class="desc-item"><span class="t-es">Con mantequilla y orden de mermelada.</span><span class="t-en">With butter and a side of jam.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Bisquet especial</h4>
+                        <h4><span class="t-es">Bisquet especial</span><span class="t-en">Special Biscuit</span></h4>
                         <span class="precios">$63</span>
                     </div>
-                    <p class="desc-item">Con queso panela y miel de abeja.</p>
+                    <p class="desc-item"><span class="t-es">Con queso panela y miel de abeja.</span><span class="t-en">With panela cheese and honey.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Fruta de temporada</h4>
-                        <span class="precios">CH $65 | GDE $85</span>
+                        <h4><span class="t-es">Fruta de temporada</span><span class="t-en">Seasonal Fruit</span></h4>
+                        <span class="precios"><span class="t-es">CH</span><span class="t-en">SM</span> $65 | <span class="t-es">GDE</span><span class="t-en">LG</span> $85</span>
                     </div>
                     <ul class="extras">
-                        <li>Con granola de la casa<span class="precio-extra">+$20</span></li>
+                        <li><span class="t-es">Con granola de la casa</span><span class="t-en">With house granola</span><span class="precio-extra">+$20</span></li>
                     </ul>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Timbal</h4>
-                        <span class="precios">CH $80 | GDE $95</span>
+                        <h4><span class="t-es">Timbal</span><span class="t-en">Timbal</span></h4>
+                        <span class="precios"><span class="t-es">CH</span><span class="t-en">SM</span> $80 | <span class="t-es">GDE</span><span class="t-en">LG</span> $95</span>
                     </div>
-                    <p class="desc-item">Plato de fruta con yogurt y amaranto.</p>
+                    <p class="desc-item"><span class="t-es">Plato de fruta con yogurt y amaranto.</span><span class="t-en">Fruit plate with yogurt and amaranth.</span></p>
                     <ul class="extras">
-                        <li>Con granola de la casa<span class="precio-extra">+$20</span></li>
+                        <li><span class="t-es">Con granola de la casa</span><span class="t-en">With house granola</span><span class="precio-extra">+$20</span></li>
                     </ul>
                 </div>
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Hotcakes de amaranto</h4>
+                        <h4><span class="t-es">Hotcakes de amaranto</span><span class="t-en">Amaranth Hotcakes</span></h4>
                         <span class="precios">$145</span>
                     </div>
-                    <p class="desc-item">Con yogurt, papaya y miel.</p>
+                    <p class="desc-item"><span class="t-es">Con yogurt, papaya y miel.</span><span class="t-en">With yogurt, papaya and honey.</span></p>
                     <ul class="extras">
-                        <li>Con granola de la casa<span class="precio-extra">+$20</span></li>
+                        <li><span class="t-es">Con granola de la casa</span><span class="t-en">With house granola</span><span class="precio-extra">+$20</span></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Categoría: Huevos -->
-            <div class="categoria-menu">
+            <div class="categoria-menu categoria-tab" data-tab="huevos">
                 <h3><span class="t-es">Huevos</span><span class="t-en">Eggs</span></h3>
                 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Forestales</h4>
+                        <h4><span class="t-es">Forestales</span><span class="t-en">Forestales</span></h4>
                         <span class="precios">$145</span>
                     </div>
-                    <p class="desc-item">Estrellados o revueltos, bañados en salsa verde o roja con nopales preparados.</p>
+                    <p class="desc-item"><span class="t-es">Estrellados o revueltos, bañados en salsa verde o roja con nopales preparados.</span><span class="t-en">Fried or scrambled, topped with green or red sauce and prepared nopales.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>A la mexicana</h4>
+                        <h4><span class="t-es">A la mexicana</span><span class="t-en">Mexican-style</span></h4>
                         <span class="precios">$145</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Buenaventura</h4>
+                        <h4><span class="t-es">Buenaventura</span><span class="t-en">Buenaventura</span></h4>
                         <span class="precios">$145</span>
                     </div>
-                    <p class="desc-item">Revueltos con chorizo de soya.</p>
+                    <p class="desc-item"><span class="t-es">Revueltos con chorizo de soya.</span><span class="t-en">Scrambled with soy chorizo.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Rancheros o Divorciados</h4>
+                        <h4><span class="t-es">Rancheros o Divorciados</span><span class="t-en">Rancheros or Divorciados</span></h4>
                         <span class="precios">$145</span>
                     </div>
-                    <p class="desc-item">Estrellados, bañados en salsa verde y/o roja.</p>
+                    <p class="desc-item"><span class="t-es">Estrellados, bañados en salsa verde y/o roja.</span><span class="t-en">Fried, topped with green and/or red sauce.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Amacampo</h4>
+                        <h4><span class="t-es">Amacampo</span><span class="t-en">Amacampo</span></h4>
                         <span class="precios">$145</span>
                     </div>
-                    <p class="desc-item">Revueltos con queso manchego y cebollín. Servidos con pan de la casa.</p>
+                    <p class="desc-item"><span class="t-es">Revueltos con queso manchego y cebollín. Servidos con pan de la casa.</span><span class="t-en">Scrambled with manchego cheese and chives. Served with house bread.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Omelette de verduras</h4>
+                        <h4><span class="t-es">Omelette de verduras</span><span class="t-en">Vegetable Omelette</span></h4>
                         <span class="precios">$152</span>
                     </div>
-                    <p class="desc-item">De champiñones o acelgas con queso manchego o panela. Acompañado de ensalada.</p>
+                    <p class="desc-item"><span class="t-es">De champiñones o acelgas con queso manchego o panela. Acompañado de ensalada.</span><span class="t-en">With mushrooms or chard and manchego or panela cheese. Served with salad.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Omelette de queso de cabra</h4>
+                        <h4><span class="t-es">Omelette de queso de cabra</span><span class="t-en">Goat Cheese Omelette</span></h4>
                         <span class="precios">$185</span>
                     </div>
-                    <p class="desc-item">Con ensalada mediterránea.</p>
+                    <p class="desc-item"><span class="t-es">Con ensalada mediterránea.</span><span class="t-en">With Mediterranean salad.</span></p>
                     <ul class="extras">
-                        <li>Sólo con claras <span class="precio-extra">+$15</span></li>
+                        <li><span class="t-es">Sólo con claras</span><span class="t-en">Egg whites only</span> <span class="precio-extra">+$15</span></li>
                     </ul>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Omelette de chilaquiles</h4>
+                        <h4><span class="t-es">Omelette de chilaquiles</span><span class="t-en">Chilaquiles Omelette</span></h4>
                         <span class="precios">$152</span>
                     </div>
-                    <p class="desc-item">Con crema y queso, acompañados de frijoles.</p>
+                    <p class="desc-item"><span class="t-es">Con crema y queso, acompañados de frijoles.</span><span class="t-en">With cream and cheese, served with beans.</span></p>
                     <ul class="extras">
-                        <li>Sólo con claras <span class="precio-extra">+$15</span></li>
-                        <li>Con aguacate <span class="precio-extra">+$30</span></li>
-                        <li>Con queso manchego fundido <span class="precio-extra">+$35</span></li>
+                        <li><span class="t-es">Sólo con claras</span><span class="t-en">Egg whites only</span> <span class="precio-extra">+$15</span></li>
+                        <li><span class="t-es">Con aguacate</span><span class="t-en">With avocado</span> <span class="precio-extra">+$30</span></li>
+                        <li><span class="t-es">Con queso manchego fundido</span><span class="t-en">With melted manchego cheese</span> <span class="precio-extra">+$35</span></li>
                     </ul>
                 </div>
             </div>
@@ -628,12 +641,12 @@
             <div class="categoria-menu">
                 <div class="item-menu" style="border-left: 5px solid #FDFBF7; background-color: rgba(255, 255, 255, 0.85);">
                     <div class="item-header">
-                        <h4 style="color: #487667;">Convierte tu desayuno en paquete</h4>
+                        <h4 style="color: #487667;"><span class="t-es">Convierte tu desayuno en paquete</span><span class="t-en">Turn your breakfast into a package</span></h4>
                         <span class="precios" style="color: #487667;">+$65</span>
                     </div>
-                    <p class="desc-item" style="color: #333;">Jugo o fruta chico + café americano o tisana de la casa.</p>
+                    <p class="desc-item" style="color: #333;"><span class="t-es">Jugo o fruta chico + café americano o tisana de la casa.</span><span class="t-en">Small juice or fruit + American coffee or house herbal tea.</span></p>
                     <ul class="extras">
-                        <li style="color: #487667;">Cambia tu bebida <span class="precio-extra" style="color: #487667;">+$15</span></li>
+                        <li style="color: #487667;"><span class="t-es">Cambia tu bebida</span><span class="t-en">Change your drink</span> <span class="precio-extra" style="color: #487667;">+$15</span></li>
                     </ul>
                 </div>
             </div>
@@ -664,7 +677,15 @@
             </div>
 
             <!-- Categoría: Jugos y Licuados -->
-            <div class="categoria-menu">
+                        <div class="subnav-tabs">
+                <button type="button" class="tab-link activo" data-tab="jugos"><span class="t-es">Jugos y licuados</span><span class="t-en">Juices &amp; Smoothies</span></button>
+                <button type="button" class="tab-link" data-tab="refrescantes"><span class="t-es">Refrescantes</span><span class="t-en">Refreshing Drinks</span></button>
+                <button type="button" class="tab-link" data-tab="infusiones"><span class="t-es">Infusiones y tés</span><span class="t-en">Infusions &amp; Teas</span></button>
+                <button type="button" class="tab-link" data-tab="cafe"><span class="t-es">Café</span><span class="t-en">Coffee</span></button>
+                <button type="button" class="tab-link" data-tab="chocolate"><span class="t-es">Chocolate</span><span class="t-en">Chocolate</span></button>
+            </div>
+
+            <div class="categoria-menu categoria-tab" data-tab="jugos">
                 <h3><span class="t-es">Jugos y licuados</span><span class="t-en">Juices &amp; Smoothies</span></h3>
 
                 <div class="encabezado-precios">
@@ -674,16 +695,16 @@
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Jugo cítrico</h4>
+                        <h4><span class="t-es">Jugo cítrico</span><span class="t-en">Citrus Juice</span></h4>
                         <span class="precios">$37</span>
                         <span class="precios">$44</span>
                     </div>
-                    <p class="desc-item">Naranja, toronja o mandarina, según temporada.</p>
+                    <p class="desc-item"><span class="t-es">Naranja, toronja o mandarina, según temporada.</span><span class="t-en">Orange, grapefruit or tangerine, seasonal.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Jugo de zanahoria</h4>
+                        <h4><span class="t-es">Jugo de zanahoria</span><span class="t-en">Carrot Juice</span></h4>
                         <span class="precios">$37</span>
                         <span class="precios">$44</span>
                     </div>
@@ -691,7 +712,7 @@
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Jugo combinado</h4>
+                        <h4><span class="t-es">Jugo combinado</span><span class="t-en">Mixed Juice</span></h4>
                         <span class="precios">$40</span>
                         <span class="precios">$43</span>
                     </div>
@@ -699,21 +720,21 @@
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Licuado de papaya, plátano o mermelada de frutos rojos de la casa</h4>
+                        <h4><span class="t-es">Licuado de papaya, plátano o mermelada de frutos rojos de la casa</span><span class="t-en">House Papaya, Banana or Red Berry Jam Smoothie</span></h4>
                         <span class="precios">$56</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Licuado de plátano con chocolate</h4>
+                        <h4><span class="t-es">Licuado de plátano con chocolate</span><span class="t-en">Chocolate Banana Smoothie</span></h4>
                         <span class="precios">$56</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Licuado de amaranto, maíz y cacao</h4>
+                        <h4><span class="t-es">Licuado de amaranto, maíz y cacao</span><span class="t-en">Amaranth, Corn and Cacao Smoothie</span></h4>
                         <span class="precios">$56</span>
                     </div>
                 </div>
@@ -721,7 +742,7 @@
             </div>
 
             <!-- Categoría: Refrescantes -->
-            <div class="categoria-menu">
+            <div class="categoria-menu categoria-tab" data-tab="refrescantes">
                 <h3><span class="t-es">Refrescantes</span><span class="t-en">Refreshing Drinks</span></h3>
 
                 <div class="encabezado-precios">
@@ -731,100 +752,100 @@
                 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Soda natural de jengibre, limón y miel</h4>
+                        <h4><span class="t-es">Soda natural de jengibre, limón y miel</span><span class="t-en">Natural Ginger, Lemon and Honey Soda</span></h4>
                         <span class="precios">$56</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Ceres de media noche</h4>
+                        <h4><span class="t-es">Ceres de media noche</span><span class="t-en">Ceres de Media Noche</span></h4>
                         <span class="precios">$60</span>
                     </div>
-                    <p class="desc-item">Elaborada con extracto de jengibre y espresso.</p>
+                    <p class="desc-item"><span class="t-es">Elaborada con extracto de jengibre y espresso.</span><span class="t-en">Made with ginger extract and espresso.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Pomelo Spritz</h4>
+                        <h4><span class="t-es">Pomelo Spritz</span><span class="t-en">Pomelo Spritz</span></h4>
                         <span class="precios">$60</span>
                     </div>
-                    <p class="desc-item">Shot de espresso con soda de toronja.</p>
+                    <p class="desc-item"><span class="t-es">Shot de espresso con soda de toronja.</span><span class="t-en">Espresso shot with grapefruit soda.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Espresso tonic</h4>
+                        <h4><span class="t-es">Espresso tonic</span><span class="t-en">Espresso Tonic</span></h4>
                         <span class="precios">$60</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Jardín secreto</h4>
+                        <h4><span class="t-es">Jardín secreto</span><span class="t-en">Secret Garden</span></h4>
                         <span class="precios">$60</span>
                     </div>
-                    <p class="desc-item">Tisana de la casa, jugo de naranja, jarabe de agave y agua tónica.</p>
+                    <p class="desc-item"><span class="t-es">Tisana de la casa, jugo de naranja, jarabe de agave y agua tónica.</span><span class="t-en">House herbal tea, orange juice, agave syrup and tonic water.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Lassi</h4>
+                        <h4><span class="t-es">Lassi</span><span class="t-en">Lassi</span></h4>
                         <span class="precios">$55</span>
                     </div>
-                    <p class="desc-item">Bebida refrescante elaborada con yogurt y fruta fresca, con un toque de cardamomo o clorofila.</p>
+                    <p class="desc-item"><span class="t-es">Bebida refrescante elaborada con yogurt y fruta fresca, con un toque de cardamomo o clorofila.</span><span class="t-en">Refreshing drink made with yogurt and fresh fruit, with a touch of cardamom or chlorophyll.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Lassi especial</h4>
+                        <h4><span class="t-es">Lassi especial</span><span class="t-en">Special Lassi</span></h4>
                         <span class="precios">$60</span>
                     </div>
-                    <p class="desc-item">Dos frutas.</p>
+                    <p class="desc-item"><span class="t-es">Dos frutas.</span><span class="t-en">Two fruits.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Limonada, naranjada o toronjada</h4>
+                        <h4><span class="t-es">Limonada, naranjada o toronjada</span><span class="t-en">Lemonade, Orangeade or Grapefruitade</span></h4>
                         <span class="precios">$52</span>
                     </div>
                     <ul class="extras">
-                        <li>Mineral <span class="precio-extra">+$5</span></li>
+                        <li><span class="t-es">Mineral</span><span class="t-en">Sparkling</span> <span class="precio-extra">+$5</span></li>
                     </ul>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Tisana fría</h4>
+                        <h4><span class="t-es">Tisana fría</span><span class="t-en">Iced Herbal Tea</span></h4>
                         <span class="precios">$50</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Soda natural FÉLIX</h4>
+                        <h4><span class="t-es">Soda natural FÉLIX</span><span class="t-en">FÉLIX Natural Soda</span></h4>
                         <span class="precios">$52</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Kombucha PAPALOTL</h4>
+                        <h4><span class="t-es">Kombucha PAPALOTL</span><span class="t-en">PAPALOTL Kombucha</span></h4>
                         <span class="precios">$75</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Cerveza artesanal SANS</h4>
+                        <h4><span class="t-es">Cerveza artesanal SANS</span><span class="t-en">SANS Craft Beer</span></h4>
                         <span class="precios">$40</span>
                     </div>
-                    <p class="desc-item">(sin alcohol)</p>
+                    <p class="desc-item"><span class="t-es">(sin alcohol)</span><span class="t-en">(non-alcoholic)</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Agua mineral TOPO CHICO</h4>
+                        <h4><span class="t-es">Agua mineral TOPO CHICO</span><span class="t-en">TOPO CHICO Mineral Water</span></h4>
                         <span class="precios">$?</span>
                     </div>
                 </div>
@@ -837,7 +858,7 @@
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Agua de clorofila</h4>
+                        <h4><span class="t-es">Agua de clorofila</span><span class="t-en">Chlorophyll Water</span></h4>
                         <span class="precios">$32</span>
                         <span class="precios">$82</span>
                     </div>
@@ -845,7 +866,7 @@
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Agua del día</h4>
+                        <h4><span class="t-es">Agua del día</span><span class="t-en">Water of the Day</span></h4>
                         <span class="precios">$28</span>
                         <span class="precios">$80</span>
                     </div>
@@ -853,57 +874,57 @@
             </div>
 
             <!-- Categoría: Infusiones y tés -->
-            <div class="categoria-menu">
+            <div class="categoria-menu categoria-tab" data-tab="infusiones">
                 <h3><span class="t-es">Infusiones y tés</span><span class="t-en">Infusions &amp; Teas</span></h3>
             
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Tisana de la casa</h4>
+                        <h4><span class="t-es">Tisana de la casa</span><span class="t-en">House Herbal Tea</span></h4>
                         <span class="precios">$42</span>
                     </div>
-                    <p class="desc-item">Jamaica, manzana, tila y limón.</p>
+                    <p class="desc-item"><span class="t-es">Jamaica, manzana, tila y limón.</span><span class="t-en">Hibiscus, apple, linden flower and lemon.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Jengibre</h4>
+                        <h4><span class="t-es">Jengibre</span><span class="t-en">Ginger</span></h4>
                         <span class="precios">$48</span>
                     </div>
-                    <p class="desc-item">Bebida caliente de jengibre, limón y miel.</p>
+                    <p class="desc-item"><span class="t-es">Bebida caliente de jengibre, limón y miel.</span><span class="t-en">Hot drink with ginger, lemon and honey.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Shot de jengibre</h4>
+                        <h4><span class="t-es">Shot de jengibre</span><span class="t-en">Ginger Shot</span></h4>
                         <span class="precios">$40</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Tisanas artesanales</h4>
+                        <h4><span class="t-es">Tisanas artesanales</span><span class="t-en">Artisanal Herbal Teas</span></h4>
                         <span class="precios">$48</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Té verde o negro</h4>
+                        <h4><span class="t-es">Té verde o negro</span><span class="t-en">Green or Black Tea</span></h4>
                         <span class="precios">$48</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Té chai</h4>
+                        <h4><span class="t-es">Té chai</span><span class="t-en">Chai Tea</span></h4>
                         <span class="precios">$48</span>
                     </div>
-                    <p class="desc-item">Receta de la casa</p>
+                    <p class="desc-item"><span class="t-es">Receta de la casa</span><span class="t-en">House recipe</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Leche dorada</h4>
+                        <h4><span class="t-es">Leche dorada</span><span class="t-en">Golden Milk</span></h4>
                         <span class="precios">$49</span>
                     </div>
                 </div>
@@ -911,7 +932,7 @@
             </div>
 
             <!-- Categoría: Café -->
-            <div class="categoria-menu">
+            <div class="categoria-menu categoria-tab" data-tab="cafe">
                 <h3><span class="t-es">Café</span><span class="t-en">Coffee</span></h3>
 
                 <div class="encabezado-precios">
@@ -921,125 +942,125 @@
             
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Espresso</h4>
+                        <h4><span class="t-es">Espresso</span><span class="t-en">Espresso</span></h4>
                         <span class="precios">$45</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Espresso cortado</h4>
+                        <h4><span class="t-es">Espresso cortado</span><span class="t-en">Cortado</span></h4>
                         <span class="precios">$47</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Espresso doble</h4>
+                        <h4><span class="t-es">Espresso doble</span><span class="t-en">Double Espresso</span></h4>
                         <span class="precios">$49</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Flat white</h4>
+                        <h4><span class="t-es">Flat white</span><span class="t-en">Flat White</span></h4>
                         <span class="precios">$51</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Americano espresso</h4>
+                        <h4><span class="t-es">Americano espresso</span><span class="t-en">Americano</span></h4>
                         <span class="precios">$45</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Latte</h4>
+                        <h4><span class="t-es">Latte</span><span class="t-en">Latte</span></h4>
                         <span class="precios">$51</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Latte de leche vegetal*</h4>
+                        <h4><span class="t-es">Latte de leche vegetal*</span><span class="t-en">Plant-Milk Latte*</span></h4>
                         <span class="precios">$53</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Capuccino</h4>
+                        <h4><span class="t-es">Capuccino</span><span class="t-en">Cappuccino</span></h4>
                         <span class="precios">$47</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Capuccino de leche vegetal*</h4>
+                        <h4><span class="t-es">Capuccino de leche vegetal*</span><span class="t-en">Plant-Milk Cappuccino*</span></h4>
                         <span class="precios">$49</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Capuccino doble</h4>
+                        <h4><span class="t-es">Capuccino doble</span><span class="t-en">Double Cappuccino</span></h4>
                         <span class="precios">$49</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Dirty chai</h4>
+                        <h4><span class="t-es">Dirty chai</span><span class="t-en">Dirty Chai</span></h4>
                         <span class="precios">$59</span>
                     </div>
                 </div>
             </div>
 
             <!-- Categoría: Chocolate -->
-            <div class="categoria-menu">
+            <div class="categoria-menu categoria-tab" data-tab="chocolate">
                 <h3><span class="t-es">Chocolate</span><span class="t-en">Chocolate</span></h3>
                 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Chocolate</h4>
+                        <h4><span class="t-es">Chocolate</span><span class="t-en">Chocolate</span></h4>
                         <span class="precios">$47</span>
                     </div>
-                    <p class="desc-item">(oaxaqueño artesanal)</p>
+                    <p class="desc-item"><span class="t-es">(oaxaqueño artesanal)</span><span class="t-en">(artisanal Oaxacan)</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Moka</h4>
+                        <h4><span class="t-es">Moka</span><span class="t-en">Mocha</span></h4>
                         <span class="precios">$52</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Moka con leche vegetal*</h4>
+                        <h4><span class="t-es">Moka con leche vegetal*</span><span class="t-en">Mocha with Plant Milk*</span></h4>
                         <span class="precios">$54</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Chocolate de agua</h4>
+                        <h4><span class="t-es">Chocolate de agua</span><span class="t-en">Chocolate with Water</span></h4>
                         <span class="precios">$50</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Chocolate con leche vegetal*</h4>
+                        <h4><span class="t-es">Chocolate con leche vegetal*</span><span class="t-en">Chocolate with Plant Milk*</span></h4>
                         <span class="precios">$56</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Amaranto, maíz y cacao</h4>
+                        <h4><span class="t-es">Amaranto, maíz y cacao</span><span class="t-en">Amaranth, Corn and Cacao</span></h4>
                         <span class="precios">$53</span>
                     </div>
                 </div>
@@ -1047,7 +1068,7 @@
             </div>
 
             <div class="nota-leches">
-                *Leches vegetales: almendra, avena, coco, soya
+                <span class="t-es">*Leches vegetales: almendra, avena, coco, soya</span><span class="t-en">*Plant milks: almond, oat, coconut, soy</span>
             </div>
 
             <div class="decoracion-footer">
@@ -1075,240 +1096,246 @@
             </div>
 
             <!-- Categoría: Panes -->
-            <div class="categoria-menu">
+                        <div class="subnav-tabs">
+                <button type="button" class="tab-link activo" data-tab="panes"><span class="t-es">Panes</span><span class="t-en">Breads</span></button>
+                <button type="button" class="tab-link" data-tab="galletas"><span class="t-es">Galletas</span><span class="t-en">Cookies</span></button>
+                <button type="button" class="tab-link" data-tab="pasteles"><span class="t-es">Pasteles</span><span class="t-en">Cakes</span></button>
+            </div>
+
+            <div class="categoria-menu categoria-tab" data-tab="panes">
                 <h3><span class="t-es">Panes</span><span class="t-en">Breads</span></h3>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Empanada del día</h4>
+                        <h4><span class="t-es">Empanada del día</span><span class="t-en">Empanada of the Day</span></h4>
                         <span class="precios">$42</span>
                     </div>
                 </div>
                 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Pizzetta</h4>
+                        <h4><span class="t-es">Pizzetta</span><span class="t-en">Pizzetta</span></h4>
                         <span class="precios">$45</span>
                     </div>
-                    <p class="desc-item">Nuestra masa con salsa de jitomate hecha en casa y vegetales. Pregunta por el sabor del día.</p>
+                    <p class="desc-item"><span class="t-es">Nuestra masa con salsa de jitomate hecha en casa y vegetales. Pregunta por el sabor del día.</span><span class="t-en">Our dough with homemade tomato sauce and vegetables. Ask about today's flavor.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Focaccia</h4>
+                        <h4><span class="t-es">Focaccia</span><span class="t-en">Focaccia</span></h4>
                         <span class="precios">$45</span>
                     </div>
-                    <p class="desc-item">Pan de pizza con queso, aceite de oliva y hierbas finas.</p>
+                    <p class="desc-item"><span class="t-es">Pan de pizza con queso, aceite de oliva y hierbas finas.</span><span class="t-en">Pizza bread with cheese, olive oil and fine herbs.</span></p>
                     <ul class="extras">
-                        <li>Preparada con aguacate, jitomate, aceite de oliva y ajonjolí<span class="precio-extra">+$5</span></li>
+                        <li><span class="t-es">Preparada con aguacate, jitomate, aceite de oliva y ajonjolí</span><span class="t-en">Made with avocado, tomato, olive oil and sesame seeds</span><span class="precio-extra">+$5</span></li>
                     </ul>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Hojaldre del día</h4>
+                        <h4><span class="t-es">Hojaldre del día</span><span class="t-en">Puff Pastry of the Day</span></h4>
                         <span class="precios">$60</span>
                     </div>
-                    <p class="desc-item">De vegetales con queso manchego.</p>
+                    <p class="desc-item"><span class="t-es">De vegetales con queso manchego.</span><span class="t-en">With vegetables and manchego cheese.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Bisquet integral</h4>
+                        <h4><span class="t-es">Bisquet integral</span><span class="t-en">Whole Wheat Biscuit</span></h4>
                         <span class="precios">$24</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Lechuza</h4>
+                        <h4><span class="t-es">Lechuza</span><span class="t-en">Lechuza</span></h4>
                         <span class="precios">$24</span>
                     </div>
-                    <p class="desc-item">Pan integral con mermelada de frutos rojos.</p>
+                    <p class="desc-item"><span class="t-es">Pan integral con mermelada de frutos rojos.</span><span class="t-en">Whole wheat bread with red berry jam.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Carterita</h4>
+                        <h4><span class="t-es">Carterita</span><span class="t-en">Carterita</span></h4>
                         <span class="precios">$24</span>
                     </div>
-                    <p class="desc-item">Rellena de queso crema.</p>
+                    <p class="desc-item"><span class="t-es">Rellena de queso crema.</span><span class="t-en">Filled with cream cheese.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Cuernito relleno</h4>
+                        <h4><span class="t-es">Cuernito relleno</span><span class="t-en">Filled Croissant</span></h4>
                         <span class="precios">$32</span>
                     </div>
-                    <p class="desc-item">Queso con mermelada de frutos rojos.</p>
+                    <p class="desc-item"><span class="t-es">Queso con mermelada de frutos rojos.</span><span class="t-en">Cheese with red berry jam.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Cuernito de guayaba</h4>
+                        <h4><span class="t-es">Cuernito de guayaba</span><span class="t-en">Guava Croissant</span></h4>
                         <span class="precios">$30</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Cuernito de mantequilla</h4>
+                        <h4><span class="t-es">Cuernito de mantequilla</span><span class="t-en">Butter Croissant</span></h4>
                         <span class="precios">$29</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Chocolatín</h4>
+                        <h4><span class="t-es">Chocolatín</span><span class="t-en">Chocolate Croissant</span></h4>
                         <span class="precios">$40</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Panquecito integral</h4>
+                        <h4><span class="t-es">Panquecito integral</span><span class="t-en">Whole Wheat Muffin</span></h4>
                         <span class="precios">$25</span>
                     </div>
-                    <p class="desc-item">Pregunte por el sabor del día.</p>
+                    <p class="desc-item"><span class="t-es">Pregunte por el sabor del día.</span><span class="t-en">Ask about today's flavor.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Strudel de manzana</h4>
+                        <h4><span class="t-es">Strudel de manzana</span><span class="t-en">Apple Strudel</span></h4>
                         <span class="precios">$40</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Rol de la casa</h4>
+                        <h4><span class="t-es">Rol de la casa</span><span class="t-en">House Roll</span></h4>
                         <span class="precios">$35</span>
                     </div>
-                    <p class="desc-item">De canela y arándanos o romero y mascabado.</p>
+                    <p class="desc-item"><span class="t-es">De canela y arándanos o romero y mascabado.</span><span class="t-en">Cinnamon and cranberry, or rosemary and brown sugar.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Concha de vainilla o chocolate</h4>
+                        <h4><span class="t-es">Concha de vainilla o chocolate</span><span class="t-en">Vanilla or Chocolate Concha</span></h4>
                         <span class="precios">$40</span>
                     </div>
-                    <p class="desc-item">Fines de semana.</p>
+                    <p class="desc-item"><span class="t-es">Fines de semana.</span><span class="t-en">Weekends only.</span></p>
                 </div>
 
             </div>
 
             <!-- Categoría: Galletas -->
-            <div class="categoria-menu">
+            <div class="categoria-menu categoria-tab" data-tab="galletas">
                 <h3><span class="t-es">Galletas</span><span class="t-en">Cookies</span></h3>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Avena con arándanos</h4>
+                        <h4><span class="t-es">Avena con arándanos</span><span class="t-en">Oatmeal Cranberry</span></h4>
                         <span class="precios">$20</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Jengibre</h4>
+                        <h4><span class="t-es">Jengibre</span><span class="t-en">Ginger</span></h4>
                         <span class="precios">$20</span>
                     </div>
                 </div>
                 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Lunita de nuez</h4>
+                        <h4><span class="t-es">Lunita de nuez</span><span class="t-en">Walnut Lunita</span></h4>
                         <span class="precios">$15</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Chocotrozos</h4>
+                        <h4><span class="t-es">Chocotrozos</span><span class="t-en">Chocolate Chunk</span></h4>
                         <span class="precios">$30</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Amaranto</h4>
+                        <h4><span class="t-es">Amaranto</span><span class="t-en">Amaranth</span></h4>
                         <span class="precios">$20</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Naranja</h4>
+                        <h4><span class="t-es">Naranja</span><span class="t-en">Orange</span></h4>
                         <span class="precios">$15</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Zarzamora y blueberry</h4>
+                        <h4><span class="t-es">Zarzamora y blueberry</span><span class="t-en">Blackberry and Blueberry</span></h4>
                         <span class="precios">$20</span>
                     </div>
                 </div>
             </div>
 
             <!-- Categoría: Pasteles-->
-            <div class="categoria-menu">
+            <div class="categoria-menu categoria-tab" data-tab="pasteles">
                 <h3><span class="t-es">Pasteles</span><span class="t-en">Cakes</span></h3>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Pastel de chocolate</h4>
+                        <h4><span class="t-es">Pastel de chocolate</span><span class="t-en">Chocolate Cake</span></h4>
                         <span class="precios">$95</span>
                     </div>
-                    <p class="desc-item">Con cacao negro alcalinizado, relleno de dulce de leche y con cobertura de cacao al 90%.</p>
+                    <p class="desc-item"><span class="t-es">Con cacao negro alcalinizado, relleno de dulce de leche y con cobertura de cacao al 90%.</span><span class="t-en">With alkalized dark cacao, filled with dulce de leche and topped with 90% cacao coating.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Pastel de zanahoria</h4>
+                        <h4><span class="t-es">Pastel de zanahoria</span><span class="t-en">Carrot Cake</span></h4>
                         <span class="precios">$75</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Pastel de elote</h4>
+                        <h4><span class="t-es">Pastel de elote</span><span class="t-en">Corn Cake</span></h4>
                         <span class="precios">$58</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Cheesecake de temporada</h4>
+                        <h4><span class="t-es">Cheesecake de temporada</span><span class="t-en">Seasonal Cheesecake</span></h4>
                         <span class="precios">$80</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Pay polaco</h4>
+                        <h4><span class="t-es">Pay polaco</span><span class="t-en">Polish Pie</span></h4>
                         <span class="precios">$80</span>
                     </div>
-                    <p class="desc-item">De queso con manzana.</p>
+                    <p class="desc-item"><span class="t-es">De queso con manzana.</span><span class="t-en">Cheese with apple.</span></p>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Tarta de pera con almendras</h4>
+                        <h4><span class="t-es">Tarta de pera con almendras</span><span class="t-en">Pear and Almond Tart</span></h4>
                         <span class="precios">$75</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Tarta de manzana</h4>
+                        <h4><span class="t-es">Tarta de manzana</span><span class="t-en">Apple Tart</span></h4>
                         <span class="precios">$90</span>
                     </div>
                 </div>
 
                 <div class="item-menu">
                     <div class="item-header">
-                        <h4>Brownie</h4>
+                        <h4><span class="t-es">Brownie</span><span class="t-en">Brownie</span></h4>
                         <span class="precios">$40</span>
                     </div>
                 </div>
@@ -1345,6 +1372,50 @@
     <script>
         document.getElementById('toggle-lang').addEventListener('change', function () {
             document.body.classList.toggle('idioma-en', this.checked);
+        });
+    </script>
+
+    <script>
+        // Resalta el botón del menú volador según la sección que estás viendo
+        const seccionesMenu = document.querySelectorAll('.seccion-platillos');
+        const botonesNav = document.querySelectorAll('.nav-link');
+
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const idActual = entry.target.getAttribute('id');
+                    botonesNav.forEach((boton) => {
+                        boton.classList.toggle('activo', boton.getAttribute('href') === `#${idActual}`);
+                    });
+                }
+            });
+        }, {
+            root: null,
+            rootMargin: '-45% 0px -50% 0px', // franja angosta a la mitad de la pantalla
+            threshold: 0
+        });
+
+        seccionesMenu.forEach((seccion) => navObserver.observe(seccion));
+    </script>
+
+    <script>
+        // Pestañas de subcategoría dentro de cada sección
+        document.querySelectorAll('.subnav-tabs').forEach((barra) => {
+            const seccion = barra.closest('.seccion-platillos');
+            const botones = barra.querySelectorAll('.tab-link');
+            const categorias = seccion.querySelectorAll('.categoria-tab');
+
+            function mostrarTab(slug) {
+                botones.forEach((b) => b.classList.toggle('activo', b.dataset.tab === slug));
+                categorias.forEach((cat) => cat.classList.toggle('mostrar', cat.dataset.tab === slug));
+            }
+
+            botones.forEach((boton) => {
+                boton.addEventListener('click', () => mostrarTab(boton.dataset.tab));
+            });
+
+            // Mostrar la primera pestaña por default
+            mostrarTab(botones[0].dataset.tab);
         });
     </script>
 </body>
