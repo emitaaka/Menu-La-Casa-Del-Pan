@@ -1,10 +1,14 @@
 /* =========================================
-   0. SISTEMA DE IDIOMAS (ES / EN)
+   0. SISTEMA DE IDIOMAS (ES / EN / FR)
    ========================================= */
-.t-en { display: none; }
-.t-es, .t-en { font: inherit; letter-spacing: inherit; text-transform: inherit; }
-body.idioma-en .t-es { display: none; }
+.t-en, .t-fr { display: none; }
+.t-es, .t-en, .t-fr { font: inherit; letter-spacing: inherit; text-transform: inherit; }
+
+body.idioma-en .t-es, body.idioma-en .t-fr { display: none; }
 body.idioma-en .t-en { display: inline; }
+
+body.idioma-fr .t-es, body.idioma-fr .t-en { display: none; }
+body.idioma-fr .t-fr { display: inline; }
 
 /* =========================================
    1. CONFIGURACIÓN BASE Y VARIABLES
@@ -19,13 +23,21 @@ body { background-color: #F0F5F2; color: #2C3E35; min-height: 100vh; margin: 0; 
 .hero { position: relative; background-color: #acc4b9; color: #2C3E35; text-align: center; padding: 3rem 1rem 2rem; margin-bottom: 2rem; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
 
 .contenedor-idioma { position: absolute; top: 20px; right: 20px; z-index: 10; }
-.toggle-checkbox { display: none; }
-.toggle-label { background-color: #FDFBF7; border: 2px solid #487767; border-radius: 30px; width: 70px; height: 34px; display: flex; align-items: center; justify-content: space-between; padding: 0 8px; position: relative; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.lang-es, .lang-en { font-size: 0.75rem; font-weight: 900; color: #487767; z-index: 1; transition: color 0.3s ease; }
-.toggle-bolita { position: absolute; top: 2px; left: 2px; width: 26px; height: 26px; background-color: #487767; border-radius: 50%; transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1); z-index: 0; }
-.toggle-checkbox:checked + .toggle-label .toggle-bolita { transform: translateX(36px); }
-.toggle-checkbox:checked + .toggle-label .lang-en { color: #FDFBF7; }
-.toggle-checkbox:not(:checked) + .toggle-label .lang-es { color: #FDFBF7; }
+.selector-idioma {
+    background-color: #FDFBF7;
+    border: 2px solid #487767;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #487767;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    appearance: none;
+    -webkit-appearance: none;
+    text-align: center;
+}
 
 .logo-mariposa { max-width: clamp(75px, 14vw, 120px); height: auto; margin-bottom: 0.5rem; }
 .img-titulo { width: clamp(240px, 65vw, 500px); max-width: 100%; height: auto; margin-bottom: 0.5rem; }
@@ -134,7 +146,7 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
 .qr-card {
     display: inline-block;
     margin: 0 auto 1.5rem auto;
-    background-color: #FDFBF7;
+    background-color: #acc4b9;
     border-radius: 16px;
     padding: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -436,6 +448,10 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
 /* Categorías ocultas hasta que su pestaña esté activa */
 .categoria-tab { display: none; }
 .categoria-tab.mostrar { display: block; }
+
+/* Secciones principales — solo muestra la activa */
+.seccion-platillos { display: none; }
+.seccion-platillos.visible { display: block; }
 
 /* =========================================
    9. RESPONSIVE - AJUSTES DE POSICIÓN Y TIPOGRAFÍA
