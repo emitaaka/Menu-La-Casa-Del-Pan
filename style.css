@@ -15,7 +15,7 @@ body.idioma-fr .t-fr { display: inline; }
    ========================================= */
 html { 
     scroll-behavior: auto; 
-    scroll-padding-top: 85px; /* Altura exacta para que la barra pegajosa no tape nada */
+    scroll-padding-top: 130px; /* ¡Aumentamos el colchón para que la barra de dos líneas no estorbe en celular! */
 }
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Helvetica Neue', Arial, sans-serif; }
 body { background-color: #F0F5F2; color: #2C3E35; min-height: 100vh; margin: 0; }
@@ -386,4 +386,10 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
     .hoja-der-seccion { top: -25px; right: -20px; }
     .texto-deco { font-size: 1.2rem; letter-spacing: 1.5px; }
     .cabecera-seccion h2 { font-size: 1.9rem; }
+}
+
+@media (max-width: 768px) {
+    .seccion-platillos {
+        padding-top: 20px; /* Hace que el contenido suba un poco más de forma natural */
+    }
 }
