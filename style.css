@@ -13,7 +13,10 @@ body.idioma-fr .t-fr { display: inline; }
 /* =========================================
    1. CONFIGURACIÓN BASE Y VARIABLES
    ========================================= */
-html { scroll-behavior: smooth; }
+html { 
+    scroll-behavior: auto; 
+    scroll-padding-top: 85px; /* Altura exacta para que la barra pegajosa no tape nada */
+}
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Helvetica Neue', Arial, sans-serif; }
 body { background-color: #F0F5F2; color: #2C3E35; min-height: 100vh; margin: 0; }
 
@@ -54,18 +57,19 @@ body { background-color: #F0F5F2; color: #2C3E35; min-height: 100vh; margin: 0; 
 .nav-pegajosa { position: sticky; top: 0; background-color: #FDFBF7; z-index: 100; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; padding: 15px 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); margin-bottom: 2rem; }
 .nav-link { text-decoration: none; color: #5F8271; font-size: 0.9rem; font-weight: bold; padding: 8px 16px; border-radius: 20px; transition: all 0.3s ease; background-color: #E8EFEA; }
 
-/* Cada botón toma el mismo color que su tarjeta de inicio */
-.nav-link[href="#comidas"]:hover,
-.nav-link[href="#comidas"].activo { background-color: #e3e0d9; color: #4A3320; }
+.nav-link[href="#comidas"]:hover, .nav-link[href="#comidas"].activo { background-color: #e3e0d9; color: #4A3320; }
+.nav-link[href="#desayunos"]:hover, .nav-link[href="#desayunos"].activo { background-color: #487667; color: #FDFBF7; }
+.nav-link[href="#bebidas"]:hover, .nav-link[href="#bebidas"].activo { background-color: #b2c29d; color: #4A3320; }
+.nav-link[href="#delhorno"]:hover, .nav-link[href="#delhorno"].activo { background-color: #698b64; color: #FDFBF7; }
 
-.nav-link[href="#desayunos"]:hover,
-.nav-link[href="#desayunos"].activo { background-color: #487667; color: #FDFBF7; }
-
-.nav-link[href="#bebidas"]:hover,
-.nav-link[href="#bebidas"].activo { background-color: #b2c29d; color: #4A3320; }
-
-.nav-link[href="#delhorno"]:hover,
-.nav-link[href="#delhorno"].activo { background-color: #698b64; color: #FDFBF7; }
+.btn-inicio-nav {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+.btn-inicio-nav:hover { transform: scale(1.1); }
 
 .mariposa-nav {
     width: clamp(22px, 5vw, 30px);
@@ -101,7 +105,6 @@ body { background-color: #F0F5F2; color: #2C3E35; min-height: 100vh; margin: 0; 
 .separador .horario { color: var(--color-texto); }
 .horario { font-size: 0.75rem; letter-spacing: 2px; font-weight: bold; }
 
-/* Hojitas animadas de las tarjetas principales */
 .hoja { position: absolute; width: clamp(100px, 27vw, 250px); opacity: 0.8; z-index: 1; transition: transform 0.5s ease; }
 .hoja-izq { top: -40px; left: -40px; transform-origin: top left; }
 .hoja-der { top: -40px; right: -40px; transform-origin: top right; }
@@ -142,7 +145,6 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
 .icono-contacto { margin-right: 4px; }
 .handle-ig { font-family: 'Brush Script MT', cursive; font-style: italic; font-size: 1.2rem; }
 
-/* Tarjeta real para el QR: ahora el fondo blanco delimita claramente el área clickeable */
 .qr-card {
     display: inline-block;
     margin: 0 auto 1.5rem auto;
@@ -155,35 +157,24 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
 .qr-card:hover { transform: scale(1.05); box-shadow: 0 6px 14px rgba(0,0,0,0.2); }
 .qr-ig { display: block; width: clamp(85px, 18vw, 110px); height: clamp(85px, 18vw, 110px); }
 
-.footer-firma {
-    font-family: 'Brush Script MT', cursive;
-    font-style: italic;
-    font-size: 1.1rem;
-    color: #4A3320;
-    opacity: 0.85;
-    margin-top: 0.5rem;
-}
-
 /* =========================================
    6. DISEÑO DE LOS PLATILLOS INDIVIDUALES
    ========================================= */
 #contenedor-menus { max-width: 800px; margin: 0 auto; padding: 0 1rem 4rem 1rem; }
 .seccion-platillos { 
-    padding: 80px 1rem 4rem 1rem; 
+    padding: 50px 1rem 4rem 1rem; 
     margin-bottom: 2rem; 
     border-radius: 20px; 
-    overflow: hidden; /* Pasamos el "recorte" a la tarjeta principal */
-    position: relative; /* Asegura que el recorte funcione bien */
+    overflow: hidden; 
+    position: relative; 
 }
 
-/* --- CABECERAS DE SECCIÓN --- */
 .cabecera-seccion {
     text-align: center;
     margin-bottom: 2rem;
     padding: 1rem 1rem 2rem 1rem;
 }
 
-/* Textos de la cabecera */
 .cabecera-seccion h2, 
 .cabecera-seccion .subtitulo-cursiva, 
 .horario-detalle, 
@@ -196,11 +187,11 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
 }
 
 .cabecera-seccion h2 {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Asegúrate que sea la misma que en .titulo-cafe */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     font-weight: 900;
     letter-spacing: 3px;
     font-size: 2.5rem;
-    color: var(--color-texto); /* Ajustado al café */
+    color: var(--color-texto);
 }
 .horario-detalle { font-size: 0.85rem; font-weight: bold; letter-spacing: 1px; }
 .categoria-menu h3 {
@@ -213,7 +204,6 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
     text-transform: uppercase;
 }
 
-/* Capas para que el texto resalte sobre las hojas */
 .cabecera-seccion h2,
 .cabecera-seccion .subtitulo-cursiva,
 .cabecera-seccion .separador-seccion,
@@ -222,7 +212,6 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
     z-index: 2;
 }
 
-/* Las hojitas decorativas de la cabecera */
 .hoja-seccion {
     position: absolute;
     width: clamp(150px, 40vw, 360px);
@@ -231,24 +220,12 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
     pointer-events: none; 
 }
 
-/* Las empujamos más hacia arriba y a los lados */
-.hoja-izq-seccion { 
-    top: -50px;   /* Las subimos con fuerza */
-    left: -40px;  /* Las empujamos a la izquierda */
-    transform-origin: top left; 
-}
+.hoja-izq-seccion { top: -50px; left: -40px; transform-origin: top left; }
+.hoja-der-seccion { top: -50px; right: -40px; transform-origin: top right; }
 
-.hoja-der-seccion { 
-    top: -50px;   /* Las subimos con fuerza */
-    right: -40px; /* Las empujamos a la derecha */
-    transform-origin: top right; 
-}
-
-/* Agrega esto para animar las hojas de los menús internos */
 .seccion-platillos .hoja-izq-seccion { animation: brisa-izq 2s ease-in-out infinite; }
 .seccion-platillos .hoja-der-seccion { animation: brisa-der 2s ease-in-out infinite; }
 
-/* Doble línea de la cabecera */
 .separador-seccion {
     display: flex;
     flex-direction: column;
@@ -257,14 +234,13 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
 }
 
 .separador-seccion hr {
-    width: 90%; /* Que abarquen casi todo el espacio */
-    max-width: 450px; /* Límite mucho más largo (antes 300px) */
+    width: 90%;
+    max-width: 450px;
     border: none;
     border-top: 1.5px solid var(--color-titulos);
     margin: 6px 0;
 }
 
-/* --- TARJETAS DE PLATILLOS --- */
 .item-menu { 
     background-color: var(--bg-item);
     padding: 1.2rem 1.5rem; 
@@ -301,34 +277,10 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
 /* =========================================
    7. COLORES Y ESTILOS POR SECCIÓN DE MENÚ
    ========================================= */
-.tema-comidas { 
-    background-color: #e3e0d9; 
-    --color-titulos: #477566; 
-    --color-texto: #645047; 
-    --bg-item: rgba(255, 255, 255, 0.6); 
-    --color-desc: #555; 
-}
-.tema-desayunos { 
-    background-color: #487667; 
-    --color-titulos: #B3C09B; 
-    --color-texto: #FDFBF7; 
-    --bg-item: rgba(0, 0, 0, 0.15); 
-    --color-desc: #E8EFEA; 
-}
-.tema-bebidas { 
-    background-color: #b2c29d; 
-    --color-titulos: #6D7C50; 
-    --color-texto: #645047; 
-    --bg-item: rgba(255, 255, 255, 0.5); 
-    --color-desc: #555;
-}
-.tema-delhorno { 
-    background-color: #698b64; 
-    --color-titulos: #BABD4F; 
-    --color-texto: #FDFBF7; 
-    --bg-item: rgba(0, 0, 0, 0.15); 
-    --color-desc: #E8EFEA;
-}
+.tema-comidas { background-color: #e3e0d9; --color-titulos: #477566; --color-texto: #645047; --bg-item: rgba(255, 255, 255, 0.6); --color-desc: #555; }
+.tema-desayunos { background-color: #487667; --color-titulos: #B3C09B; --color-texto: #FDFBF7; --bg-item: rgba(0, 0, 0, 0.15); --color-desc: #E8EFEA; }
+.tema-bebidas { background-color: #b2c29d; --color-titulos: #6D7C50; --color-texto: #645047; --bg-item: rgba(255, 255, 255, 0.5); --color-desc: #555; }
+.tema-delhorno { background-color: #698b64; --color-titulos: #BABD4F; --color-texto: #FDFBF7; --bg-item: rgba(0, 0, 0, 0.15); --color-desc: #E8EFEA; }
 
 /* =========================================
    8. DECORACIÓN FOOTER DE SECCIONES
@@ -349,15 +301,12 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
     object-fit: contain;
 }
 
-/* Ramas más pequeñas en Bebidas y Del Horno, pero con mínimo legible
-   porque estos trazos (footer3/footer4) son más delgados que footer2 */
-.tema-bebidas .deco-rama,
-.tema-delhorno .deco-rama {
+.tema-bebidas .deco-rama, .tema-delhorno .deco-rama {
     width: clamp(45px, 9vw, 100px);
 }
 
 .texto-deco {
-    color: var(--color-titulos); /* Usa el color decorativo de cada sección para combinar con las hojitas */
+    color: var(--color-titulos);
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-weight: 900;
     letter-spacing: 3px;
@@ -365,27 +314,20 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
     text-transform: uppercase;
 }
 
-/* Animación de expansión hacia afuera */
 @keyframes brisa-expandir-izq {
     0% { transform: translateX(0); }
-    50% { transform: translateX(-15px); } /* Se desplaza hacia afuera a la izquierda */
+    50% { transform: translateX(-15px); }
     100% { transform: translateX(0); }
 }
 
 @keyframes brisa-expandir-der {
     0% { transform: translateX(0); }
-    50% { transform: translateX(15px); } /* Se desplaza hacia afuera a la derecha */
+    50% { transform: translateX(15px); }
     100% { transform: translateX(0); }
 }
 
-/* Aplicamos animaciones específicas a cada lado */
-.decoracion-footer .hoja-izq-footer {
-    animation: brisa-expandir-izq 3s ease-in-out infinite;
-}
-
-.decoracion-footer .hoja-der-footer {
-    animation: brisa-expandir-der 3s ease-in-out infinite;
-}
+.decoracion-footer .hoja-izq-footer { animation: brisa-expandir-izq 3s ease-in-out infinite; }
+.decoracion-footer .hoja-der-footer { animation: brisa-expandir-der 3s ease-in-out infinite; }
 
 .encabezado-precios {
     display: grid;
@@ -394,30 +336,16 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
     font-weight: bold;
     letter-spacing: 1px;
     color: var(--color-desc);
-    margin-top: 0.8rem; /* le da aire respecto al h3 */
+    margin-top: 0.8rem;
     margin-bottom: 0.3rem;
     padding: 0 1.5rem 0.5rem 1.5rem;
 }
-
-.encabezado-precios span {
-    text-align: center;
-}
-
-.encabezado-precios span:first-child {
-    grid-column: 2;
-}
-
-.nota-leches {
-    text-align: right;
-    font-size: 0.7rem;
-    font-style: italic;
-    color: var(--color-desc);
-    margin-top: 1rem;
-    padding: 0 1.5rem;
-}
+.encabezado-precios span { text-align: center; }
+.encabezado-precios span:first-child { grid-column: 2; }
+.nota-leches { text-align: right; font-size: 0.7rem; font-style: italic; color: var(--color-desc); margin-top: 1rem; padding: 0 1.5rem; }
 
 /* =========================================
-   10. PESTAÑAS DE SUBCATEGORÍA (dentro de cada sección)
+   10. PESTAÑAS DE SUBCATEGORÍA
    ========================================= */
 .subnav-tabs {
     display: flex;
@@ -445,27 +373,17 @@ footer { background-color: #acc4b9; padding: 3rem 1rem; text-align: center; bord
 .tab-link:hover { filter: brightness(1.1); }
 .tab-link.activo { background-color: var(--color-titulos); color: #FDFBF7; border-color: var(--color-titulos); }
 
-/* Categorías ocultas hasta que su pestaña esté activa */
 .categoria-tab { display: none; }
 .categoria-tab.mostrar { display: block; }
 
-/* Secciones principales — solo muestra la activa */
 .seccion-platillos { display: none; }
 .seccion-platillos.visible { display: block; }
 
-/* =========================================
-   9. RESPONSIVE - AJUSTES DE POSICIÓN Y TIPOGRAFÍA
-   (Los tamaños de imagen ya se escalan solos con clamp() 
-   en sus reglas base, arriba en este archivo)
-   ========================================= */
-
-/* Celulares: acercamos un poco las hojas a la esquina y achicamos textos */
 @media (max-width: 480px) {
     .hoja-izq { top: -20px; left: -20px; }
     .hoja-der { top: -20px; right: -20px; }
     .hoja-izq-seccion { top: -25px; left: -20px; }
     .hoja-der-seccion { top: -25px; right: -20px; }
-
     .texto-deco { font-size: 1.2rem; letter-spacing: 1.5px; }
     .cabecera-seccion h2 { font-size: 1.9rem; }
 }

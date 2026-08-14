@@ -34,7 +34,9 @@
     </header>
 
     <nav class="nav-pegajosa">
-        <img src="./Imagenes/mariposa.png" alt="Papalotl" class="mariposa-nav">
+        <a href="#" class="btn-inicio-nav" title="Volver al inicio">
+            <img src="./Imagenes/mariposa.png" alt="Papalotl" class="mariposa-nav">
+        </a>
         <a href="#comidas" class="nav-link"><span class="t-es">Comidas</span><span class="t-en">Food</span><span class="t-fr">Plats</span></a>
         <a href="#desayunos" class="nav-link"><span class="t-es">Desayunos</span><span class="t-en">Breakfast</span><span class="t-fr">Petit-déj</span></a>
         <a href="#bebidas" class="nav-link"><span class="t-es">Bebidas</span><span class="t-en">Drinks</span><span class="t-fr">Boissons</span></a>
@@ -1385,23 +1387,21 @@
         const secciones  = document.querySelectorAll('.seccion-platillos');
 
         function mostrarSeccion(id, hacerScroll = true) {
-            // Oculta todas las secciones y muestra solo la seleccionada
             secciones.forEach(s => s.classList.remove('visible'));
             const target = document.getElementById(id);
             if (target) target.classList.add('visible');
 
-            // Marca el botón activo en la nav
             navLinks.forEach(link => {
                 link.classList.toggle('activo', link.getAttribute('href') === '#' + id);
             });
 
-            // Solo hace scroll si se pide (no en la carga inicial)
             if (hacerScroll) {
-                document.getElementById('contenedor-menus').scrollIntoView({ behavior: 'instant' });
+                // Teletransporte instantáneo al contenedor de menús
+                document.getElementById('contenedor-menus').scrollIntoView({ behavior: 'auto', block: 'start' });
             }
         }
 
-        // Clic en los botones de la nav
+        // Clic en los botones de la nav (teletransporte)
         navLinks.forEach(link => {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1414,15 +1414,14 @@
             tarjeta.addEventListener('click', function (e) {
                 e.preventDefault();
                 mostrarSeccion(this.getAttribute('href').replace('#', ''));
-                document.getElementById('contenedor-menus').scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('contenedor-menus').scrollIntoView({ behavior: 'auto', block: 'start' });
             });
         });
 
-        // Botón "Ver Menú" del hero
+        // Botón "Ver Menú" del hero: ahora te manda a las TARJETITAS del inicio
         document.getElementById('btn-ver-menu').addEventListener('click', function (e) {
             e.preventDefault();
-            mostrarSeccion('comidas');
-            document.getElementById('contenedor-menus').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('seccion-menu').scrollIntoView({ behavior: 'auto', block: 'start' });
         });
 
         // Muestra "comidas" por defecto al cargar, sin hacer scroll
@@ -1443,7 +1442,6 @@
                 boton.addEventListener('click', () => mostrarTab(boton.dataset.tab));
             });
 
-            // Mostrar la primera pestaña por defecto
             mostrarTab(botones[0].dataset.tab);
         });
     </script>
